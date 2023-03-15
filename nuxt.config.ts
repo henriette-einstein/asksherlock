@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   app: {
-    baseURL: '/hennipages/'
+    baseURL: process.env.BASE_URL
   },
   modules: [
     '@nuxtjs/tailwindcss',
@@ -11,5 +11,6 @@ export default defineNuxtConfig({
   // https://content.nuxtjs.org
   content: {
     documentDriven: true
-  }
+  },
+  ssr: false
 })

@@ -6,7 +6,8 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "deploy": "gh-pages --dotfiles -d .output/public"
+    "deploy": "gh-pages --dotfiles -d .output/public",
+    "extract-meta": "node scripts/extract-meta.js"
   },
   "devDependencies": {
     "@nuxt/content": "^2.5.2",
@@ -15,5 +16,8 @@
     "gh-pages": "^5.0.0",
     "nuxt": "^3.2.3",
     "nuxt-icon": "^0.3.2"
+  },
+  "dependencies": {
+    "gray-matter": "^4.0.3"
   }
 }
