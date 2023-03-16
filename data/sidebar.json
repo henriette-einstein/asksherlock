@@ -5,7 +5,21 @@
       "label": "Sources",
       "children": [
         {
-          "label": "Novels"
+          "label": "Novels",
+          "children": [
+            {
+              "label": "A Study in Scarlet"
+            },
+            {
+              "label": "The Sign of the Four"
+            },
+            {
+              "label": "The Hound of the Baskervilles"
+            },
+            {
+              "label": "The Valley of Fear"
+            }
+          ]            
         },
         {
           "label": "The Adventures of Sherlock Holmes"

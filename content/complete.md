@@ -1,27 +1,27 @@
 # The Complete Sherlock Holmes
 
 ## The Novels
-- [A Study in Scarlet](/source/NOVELS/STUD/STUD.en.md.md)
-- [The Sign of the Four](/source/NOVELS/SIGN/SIGN.en.md.md)
-- [The Hound of the Baskervilles](/source/NOVELS/HOUN/HOUN.en.md.md)
-- [The Valley of Fear](/source/NOVELS/VALL/VALL.en.md.md)
+- [A Study in Scarlet](/source/NOVELS/STUD/STUD.en.md)
+- [The Sign of the Four](/source/NOVELS/SIGN/SIGN.en.md)
+- [The Hound of the Baskervilles](/source/NOVELS/HOUN/HOUN.en.md)
+- [The Valley of Fear](/source/NOVELS/VALL/VALL.en.md)
 
 ## The Stories
 
 ### The Adventures of Sherlock Holmes
 
-- [A Scandal in Bohemia](/source/ADVE/SCAN/SCAN.en.md.md)
-- [The Read-Headed League](/source/ADVE/REDH/REDH.en.md.md)
-- [A Case of Identity](/source/ADVE/IDEN/IDEN.en.md.md)
-- [The Boscombe Valley Mystery](/source/ADVE/BOSC/BOSC.en.md.md)
-- [The Five Orange Pips](/source/ADVE/FIVE/FIVE.en.md.md)
-- [The Man with the Twisted Lip](/source/ADVE/TWIS/TWIS.en.md.md)
+- [A Scandal in Bohemia](/source/ADVE/SCAN/SCAN.en.md)
+- [The Read-Headed League](/source/ADVE/REDH/REDH.en.md)
+- [A Case of Identity](/source/ADVE/IDEN/IDEN.en.md)
+- [The Boscombe Valley Mystery](/source/ADVE/BOSC/BOSC.en.md)
+- [The Five Orange Pips](/source/ADVE/FIVE/FIVE.en.md)
+- [The Man with the Twisted Lip](/source/ADVE/TWIS/TWIS.en.md)
 - [The Adventure of the Blue Carbuncle](/source/ADVE/BLUE/BLUE.en.md)
-- [The Adventure of the Speckled Band](/source/ADVE/SPEC/SPEC.en.md.md)
-- [The Adventure of the Engeneers Thumb](/source/ADVE/ENGR/ENGR.en.md.md)
-- [The Adventure of the Noble Bachelor](/source/ADVE/NOBL/NOBL.en.md.md)
-- [The Adventure of the Beryl Coronet](/source/ADVE/BERY/BERY.en.md.md)
-- [The Adventure of the Copper Beeches](/source/ADVE/COPP/COPP.en.md.md)
+- [The Adventure of the Speckled Band](/source/ADVE/SPEC/SPEC.en.md)
+- [The Adventure of the Engeneers Thumb](/source/ADVE/ENGR/ENGR.en.md)
+- [The Adventure of the Noble Bachelor](/source/ADVE/NOBL/NOBL.en.md)
+- [The Adventure of the Beryl Coronet](/source/ADVE/BERY/BERY.en.md)
+- [The Adventure of the Copper Beeches](/source/ADVE/COPP/COPP.en.md)
 
 ### The Memoirs of Sherlock Holmes
 Silver Blaze
