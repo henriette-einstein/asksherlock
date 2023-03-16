@@ -1,13 +1,4 @@
-<template>
-  <aside class="w-1/5 bg-gray-200 text-gray-800 prose">
-    <tree-node :node="node"/>  
-  </aside>
-</template>
-
-<script setup>
-// import sidebar from '~/data/sidebar.json'
-import sidebar from '~/data/sidebar.json'
-const node = {
+{
   "label": "Sidebar",
   "children": [
     {
@@ -29,6 +20,3 @@ const node = {
     }
   ]
 }
-console.log("Loading sidebar")
-console.log(sidebar)
-</script>
