@@ -4,6 +4,7 @@ Shortcut: STUD
 Collection: NOVELS
 Author: Arthur Conan Doyle
 Language: English
+Published: 1887
 ---
 # A Study In Scarlet
 ## PART I.

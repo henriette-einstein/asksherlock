@@ -4,6 +4,7 @@ Shortcut: HOUN
 Collection: NOVELS
 Author: Arthur Conan Doyle
 Language: English
+Published: 1902
 ---
 # THE HOUND OF THE BASKERVILLES
 

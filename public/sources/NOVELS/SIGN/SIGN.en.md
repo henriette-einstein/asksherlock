@@ -4,6 +4,7 @@ Shortcut: SIGN
 Collection: NOVELS
 Author: Arthur Conan Doyle
 Language: English
+Published: 1890
 ---
 # The Sign of the Four
 

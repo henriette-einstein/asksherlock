@@ -4,6 +4,7 @@ Shortcut: VALL
 Collection: NOVELS
 Author: Sir Arthur Conan Doyle
 Language: English
+Published: 1915
 ---
 # THE VALLEY OF FEAR
 
