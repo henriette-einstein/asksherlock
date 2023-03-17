@@ -1066,10 +1066,3 @@ inform me where she is now.”
 wherever Sir George Burnwell is. It is equally certain, too, that
 whatever her sins are, they will soon receive a more than sufficient
 punishment.”
-
-
-
-
-![[COPP.en.md]]
-
-[[Gutenberg Info]]
