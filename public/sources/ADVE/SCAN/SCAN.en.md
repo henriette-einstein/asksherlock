@@ -4,6 +4,7 @@ Shortcut: SCAN
 Collection: ADVE
 Author: Arthur Conan Doyle
 Language: English
+Published: 1891
 ---
 # A Scandal in Bohemia
 ## I.

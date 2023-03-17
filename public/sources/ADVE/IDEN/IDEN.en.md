@@ -3,6 +3,7 @@ Title: A Case of Identity
 Shortcut: COPP
 Collection: ADVE
 Author: Arthur Conan Doyle
+Published: 1891
 ---
 # A Case of Identity
 

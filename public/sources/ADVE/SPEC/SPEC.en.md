@@ -3,6 +3,7 @@ Title: The Adventure of the Speckled Band
 Shortcut: SPEC
 Collection: ADVE
 Author: Arthur Conan Doyle
+Published: 1892
 ---
 # The Adventure of the Speckled Band
 

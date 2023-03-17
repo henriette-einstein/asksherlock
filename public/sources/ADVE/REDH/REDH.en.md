@@ -3,6 +3,7 @@ Title: The Red-Headed League
 Shortcut: REDH
 Collection: ADVE
 Author: Arthur Conan Doyle
+Published: 1891
 ---
 # The Red-Headed Leage
 

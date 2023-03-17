@@ -3,6 +3,7 @@ Title: The Boscombe Valley Mystera
 Shortcut: BOSC
 Collection: ADVE
 Author: Arthur Conan Doyle
+Published: 1891
 ---
 # THE BOSCOMBE VALLEY MYSTERY
 

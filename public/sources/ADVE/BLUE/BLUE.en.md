@@ -3,6 +3,7 @@ Title: The Adventue of the Blue Carbuncle
 Shortcut: BLUE
 Collection: ADVE
 Author: Arthur Conan Doyle
+Published: 1892
 ---
 # The Adventue of the Blue Carbuncle
 

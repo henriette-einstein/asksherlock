@@ -3,6 +3,7 @@ Title: The Five Orange Pips
 Shortcut: FIVE
 Collection: ADVE
 Author: Arthur Conan Doyle
+Published: 1891
 ---
 # The Five Orange Pips
 

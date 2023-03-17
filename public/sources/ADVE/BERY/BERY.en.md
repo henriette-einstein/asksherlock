@@ -3,6 +3,7 @@ Title: The Adventure of the Beryl Coronet
 Shortcut: BERY
 Collection: ADVE
 Author: Arthur Conan Doyle
+Published: 1892
 ---
 # The Adventure of the Beryl Coronet
 
