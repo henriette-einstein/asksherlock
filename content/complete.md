@@ -55,9 +55,9 @@
 ### His Last Bow
 1.  [Wisteria Lodge](/source/LAST/WIST/WIST.en.md), 1908 (Wisteria Lodge)
 2.  [The Cardboard Box](/source/LAST/CARD/CARD.en.md), 1893 (Die Pappschachtel)
-3.  [The Red Circle](/source/LAST/REDC.en.md), 1911 (Der Rote Kreis)
-4.  [The Bruce-Partington Plans](/source/LAST/BRUC.en.md), 1908 (Die Bruce-Partington-Pläne)
-5.  [The Dying Detective](/source/LAST/DYIN/DYN.en.md), 1913 (Der Detektiv auf dem Sterbebett)
+3.  [The Red Circle](/source/LAST/REDC/REDC.en.md), 1911 (Der Rote Kreis)
+4.  [The Bruce-Partington Plans](/source/LAST/BRUC/BRUC.en.md), 1908 (Die Bruce-Partington-Pläne)
+5.  [The Dying Detective](/source/LAST/DYIN/DYIN.en.md), 1913 (Der Detektiv auf dem Sterbebett)
 6.  [Lady Frances Carfax](/source/LAST/LADY/LADY.en.md), 1911 (Das Verschwinden der Lady Frances Carfax)
 7.  [The Devil's Foot](/source/LAST/DEVI/DEVI.en.md), 1910 (Der Teufelsfuß)
 8.  [His Last Bow](/source/LAST/LAST/LAST.en.md), 1917 (Seine Abschiedsvorstellung)
