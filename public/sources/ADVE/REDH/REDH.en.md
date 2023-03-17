@@ -5,7 +5,7 @@ Collection: ADVE
 Author: Arthur Conan Doyle
 Published: 1891
 ---
-# The Red-Headed Leage
+# The Red-Headed League
 
 
  I had called upon my friend, Mr. Sherlock Holmes, one day in the
