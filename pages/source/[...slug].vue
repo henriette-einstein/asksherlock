@@ -1,10 +1,11 @@
 <template>
-  <div>
+  <nuxt-layout>
     <pre>
       <Markdown :url="path"/>
     </pre>
-  </div>
+  </nuxt-layout>
 </template>
+
 <script setup>
 const route = useRoute()
 const path = "/sources/" + route.params.slug.join('/')

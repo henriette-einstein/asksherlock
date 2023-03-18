@@ -12,7 +12,7 @@ import { SlotFlags } from '@vue/shared';
     <!-- Content area -->
     <div class="flex flex-1">
       <!-- Sidebar -->
-      <Sidebar />
+      <Sidebar2 />
       <!-- Main content -->
       <main class="flex-1 p-6">
         <slot />
