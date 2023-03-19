@@ -3,16 +3,13 @@ import { SlotFlags } from '@vue/shared';
 
 <template>
   <div class="flex flex-col h-screen">
-    <!-- Menubar -->
-    <Menubar :menuItems="[
-      { name: 'Home', href: '/' },
-      { name: 'Doc', href: '/doc'},
-      { name: 'About', href: '/about' },
-    ]" />
+    <div class="md:hidden">
+      <Menubar/>
+    </div>
     <!-- Content area -->
     <div class="flex flex-1">
       <!-- Sidebar -->
-      <Sidebar2 />
+      <Sidebar />
       <!-- Main content -->
       <main class="flex-1 p-6">
         <slot />
@@ -21,4 +18,6 @@ import { SlotFlags } from '@vue/shared';
   </div>
 </template>
 
-
+<script setup>
+const isCollapsed = ref(false)
+</script>
