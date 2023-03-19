@@ -1,56 +1,56 @@
 # The Complete Sherlock Holmes
 
 ## The Novels
-- [A Study in Scarlet](/source/NOVELS/STUD/STUD.en.md), 1887
-- [The Sign of the Four](/source/NOVELS/SIGN/SIGN.en.md), 1890
-- [The Hound of the Baskervilles](/source/NOVELS/HOUN/HOUN.en.md), 1902
-- [The Valley of Fear](/source/NOVELS/VALL/VALL.en.md), 1915
+- [A Study in Scarlet](/source/NOVELS/STUD/en/content.md), 1887
+- [The Sign of the Four](/source/NOVELS/SIGN/en/content.md), 1890
+- [The Hound of the Baskervilles](/source/NOVELS/HOUN/en/content.md), 1902
+- [The Valley of Fear](/source/NOVELS/VALL/en/content.md), 1915
 
 ## The Stories
 
 ### The Adventures of Sherlock Holmes
 
-1. [A Scandal in Bohemia](/source/ADVE/SCAN/SCAN.en.md), 1891
-2. [The Read-Headed League](/source/ADVE/REDH/REDH.en.md), 1891
-3. [A Case of Identity](/source/ADVE/IDEN/IDEN.en.md), 1891
-4. [The Boscombe Valley Mystery](/source/ADVE/BOSC/BOSC.en.md), 1891
-5. [The Five Orange Pips](/source/ADVE/FIVE/FIVE.en.md), 1891
-6. [The Man with the Twisted Lip](/source/ADVE/TWIS/TWIS.en.md), 1891
-7. [The Adventure of the Blue Carbuncle](/source/ADVE/BLUE/BLUE.en.md), 1892
-8. [The Adventure of the Speckled Band](/source/ADVE/SPEC/SPEC.en.md), 1892
-9. [The Adventure of the Engeneers Thumb](/source/ADVE/ENGR/ENGR.en.md), 1892
-10. [The Adventure of the Noble Bachelor](/source/ADVE/NOBL/NOBL.en.md), 1892
-11. [The Adventure of the Beryl Coronet](/source/ADVE/BERY/BERY.en.md), 1892
-12. [The Adventure of the Copper Beeches](/source/ADVE/COPP/COPP.en.md), 1892
+1. [A Scandal in Bohemia](/source/ADVE/SCAN/en/content.md), 1891
+2. [The Read-Headed League](/source/ADVE/REDH/en/content.md), 1891
+3. [A Case of Identity](/source/ADVE/IDEN/en/content.md), 1891
+4. [The Boscombe Valley Mystery](/source/ADVE/BOSC/en/content.md), 1891
+5. [The Five Orange Pips](/source/ADVE/FIVE/en/content.md), 1891
+6. [The Man with the Twisted Lip](/source/ADVE/TWIS/en/content.md), 1891
+7. [The Adventure of the Blue Carbuncle](/source/ADVE/BLUE/en/content.md), 1892
+8. [The Adventure of the Speckled Band](/source/ADVE/SPEC/en/content.md), 1892
+9. [The Adventure of the Engeneers Thumb](/source/ADVE/ENGR/en/content.md), 1892
+10. [The Adventure of the Noble Bachelor](/source/ADVE/NOBL/en/content.md), 1892
+11. [The Adventure of the Beryl Coronet](/source/ADVE/BERY/en/content.md), 1892
+12. [The Adventure of the Copper Beeches](/source/ADVE/COPP/en/content.md), 1892
 
 ### The Memoirs of Sherlock Holmes
 
-1. [Silver Blaze](/source/MEMO/SILV/SILV.en.md), 1892
-2. [The Yellow Face](/source/MEMO/YELL/YELL.en.md), 1893
-3. [The Stockbroker’s Clerk](/source/MEMO/STOC/STOC.en.md), 1893
-4. [The “Gloria Scott”](/source/MEMO/GLOR/GLOR.en.md), 1893
-5. [The Musgrave Ritual](/source/MEMO/MUSG/MUSG.en.md), 1893
-6. [The Reigate Squires](/source/MEMO/REIG/REIG.en.md), 1893
-7. [The Crooked Man](/source/MEMO/CROO/CROO.en.md), 1893
-8. [The Resident Patient](/source/MEMO/RESI/RESI.en.md), 1893
-9. [The Greek Interpreter](/source/MEMO/GREE/GREE.en.md), 1893
-10. [The Naval Treaty](/source/MEMO/NAVA/NAVA.en.md), 1893
-11. [The Final Problem](/source/MEMO/FINA/FINA.en.md), 1893
+1. [Silver Blaze](/source/MEMO/SILV/en/content.md), 1892
+2. [The Yellow Face](/source/MEMO/YELL/en/content.md), 1893
+3. [The Stockbroker’s Clerk](/source/MEMO/STOC/en/content.md), 1893
+4. [The “Gloria Scott”](/source/MEMO/GLOR/en/content.md), 1893
+5. [The Musgrave Ritual](/source/MEMO/MUSG/en/content.md), 1893
+6. [The Reigate Squires](/source/MEMO/REIG/en/content.md), 1893
+7. [The Crooked Man](/source/MEMO/CROO/en/content.md), 1893
+8. [The Resident Patient](/source/MEMO/RESI/en/content.md), 1893
+9. [The Greek Interpreter](/source/MEMO/GREE/en/content.md), 1893
+10. [The Naval Treaty](/source/MEMO/NAVA/en/content.md), 1893
+11. [The Final Problem](/source/MEMO/FINA/en/content.md), 1893
 
 ### The Return of Sherlock Holmes
-1. [The Adventure of the Empty House](/source/RETU/EMPT/EMPT.en.md), 1903
-2. [The Adventure of the Norwood Builder](/source/RETU/NORW/NORW.en.md), 1903
-3. [The Adventure of the Dancing Men](/source/RETU/DANC/DANC.en.md), 1903
-4. [The Adventure of the Solitary Cyclist](/source/RETU/SOLI/SOLI.en.md), 1903
-5. [The Adventure of the Priory School](/source/RETU/PRIO/PRIO.en.md), 1904
-6. [The Adventure of Black Peter](/source/RETU/BLAC/BLAC.en.md), 1904
-7. [The Adventure of Charles Augustus Milverton](/source/RETU/CHAS/CHAS.en.md), 1904
-8. [The Adventure of the Six Napoleons](/source/RETU/SIXN/SIXN.en.md), 1904
-9. [The Adventure of the Three Students](/source/RETU/3STU/3STU.en.md), 1904
-10. [The Adventure of the Golden Pince-Nez](/source/RETU/GOLD/GOLD.en.md), 1904
-11. [The Adventure of the Missing Three-Quarter](/source/RETU/MISS/MISS.en.md), 1904
-12. [The Adventure of the Abbey Grange](/source/RETU/ABBE/ABBE.en.md), 1904
-13. [The Adventure of the Second Stain](/source/RETU/SECO/SECO.en.md), 1904
+1. [The Adventure of the Empty House](/source/RETU/EMPT/en/content.md), 1903
+2. [The Adventure of the Norwood Builder](/source/RETU/NORW/en/content.md), 1903
+3. [The Adventure of the Dancing Men](/source/RETU/DANC/en/content.md), 1903
+4. [The Adventure of the Solitary Cyclist](/source/RETU/SOLI/en/content.md), 1903
+5. [The Adventure of the Priory School](/source/RETU/PRIO/en/content.md), 1904
+6. [The Adventure of Black Peter](/source/RETU/BLAC/en/content.md), 1904
+7. [The Adventure of Charles Augustus Milverton](/source/RETU/CHAS/en/content.md), 1904
+8. [The Adventure of the Six Napoleons](/source/RETU/SIXN/en/content.md), 1904
+9. [The Adventure of the Three Students](/source/RETU/3STU/en/content.md), 1904
+10. [The Adventure of the Golden Pince-Nez](/source/RETU/GOLD/en/content.md), 1904
+11. [The Adventure of the Missing Three-Quarter](/source/RETU/MISS/en/content.md), 1904
+12. [The Adventure of the Abbey Grange](/source/RETU/ABBE/en/content.md), 1904
+13. [The Adventure of the Second Stain](/source/RETU/SECO/en/content.md), 1904
 
 ### His Last Bow
 1.  [Wisteria Lodge](/source/LAST/WIST/WIST.en.md), 1908 (Wisteria Lodge)
