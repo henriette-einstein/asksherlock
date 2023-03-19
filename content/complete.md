@@ -53,28 +53,28 @@
 13. [The Adventure of the Second Stain](/source/RETU/SECO/en/content.md), 1904
 
 ### His Last Bow
-1.  [Wisteria Lodge](/source/LAST/WIST/WIST.en.md), 1908 (Wisteria Lodge)
-2.  [The Cardboard Box](/source/LAST/CARD/CARD.en.md), 1893 (Die Pappschachtel)
-3.  [The Red Circle](/source/LAST/REDC/REDC.en.md), 1911 (Der Rote Kreis)
-4.  [The Bruce-Partington Plans](/source/LAST/BRUC/BRUC.en.md), 1908 (Die Bruce-Partington-Pläne)
-5.  [The Dying Detective](/source/LAST/DYIN/DYIN.en.md), 1913 (Der Detektiv auf dem Sterbebett)
-6.  [Lady Frances Carfax](/source/LAST/LADY/LADY.en.md), 1911 (Das Verschwinden der Lady Frances Carfax)
-7.  [The Devil's Foot](/source/LAST/DEVI/DEVI.en.md), 1910 (Der Teufelsfuß)
-8.  [His Last Bow](/source/LAST/LAST/LAST.en.md), 1917 (Seine Abschiedsvorstellung)
+1.  [Wisteria Lodge](/source/LAST/WIST/en/content.md), 1908 (Wisteria Lodge)
+2.  [The Cardboard Box](/source/LAST/CARD/en/content.md), 1893 (Die Pappschachtel)
+3.  [The Red Circle](/source/LAST/REDC/en/content.md), 1911 (Der Rote Kreis)
+4.  [The Bruce-Partington Plans](/source/LAST/BRUC/en/content.md), 1908 (Die Bruce-Partington-Pläne)
+5.  [The Dying Detective](/source/LAST/DYIN/en/content.md), 1913 (Der Detektiv auf dem Sterbebett)
+6.  [Lady Frances Carfax](/source/LAST/LADY/en/content.md), 1911 (Das Verschwinden der Lady Frances Carfax)
+7.  [The Devil's Foot](/source/LAST/DEVI/en/content.md), 1910 (Der Teufelsfuß)
+8.  [His Last Bow](/source/LAST/LAST/en/content.md), 1917 (Seine Abschiedsvorstellung)
 
 ### The Case-Book of Sherlock Holmes
 
-1. [The Illustrious Client](/source/CASE/ILLU/ILLU.en.md), 1924 (Der illustre Klient)
-2. [The Blanched Soldier](/source/CASE/BLAN/BLAN.en.md), 1926 (Der erbleichte Soldat)
-3. [The Mazarin Stone](/source/CASE/MAZA/MAZA.en.md), 1921 (Der Mazarin-Stein)
-4. [The Three Gables](/source/CASE/3GAB/3GAB.en.md), 1926 (Die Drei Giebel)
-5. [The Sussex Vampire](/source/CASE/SUSS/SUSS.en.md), 1924 (Der Vampir von Sussex)
-6. [The Three Garridebs](/source/CASE/3GAR/3GAR.en.md), 1924 (Die drei Garridebs)
-7. [The Problem of Thor Bridge](/source/CASE/THOR/THOR.en.md), 1922 (Das Rätsel der Thor-Brücke)
-8. [The Creeping Man](/source/CASE/CREE/CREE.en.md), 1923 (Der Mann mit dem geduckten Gang)
-9. [The Lion's Mane](/source/CASE/LION/LION.en.md), 1926 (Die Löwenmähne)
-10. [The Veiled Lodger](/source/CASE/VEIL/VEIL.en.md), 1927 (Die verschleierte Mieterin)
-11. [Shoscombe Old Place](/source/CASE/SHOS/SHOS.en.md), 1927 (Shoscombe Old Place)
-12. [The Retired Colourman](/source/CASE/RETI/RETI.en.md), 1926 (Der Farbenhändler im Ruhestand)
+1. [The Illustrious Client](/source/CASE/ILLU/en/content.md), 1924 (Der illustre Klient)
+2. [The Blanched Soldier](/source/CASE/BLAN/en/content.md), 1926 (Der erbleichte Soldat)
+3. [The Mazarin Stone](/source/CASE/MAZA/en/content.md), 1921 (Der Mazarin-Stein)
+4. [The Three Gables](/source/CASE/3GAB/en/content.md), 1926 (Die Drei Giebel)
+5. [The Sussex Vampire](/source/CASE/SUSS/en/content.md), 1924 (Der Vampir von Sussex)
+6. [The Three Garridebs](/source/CASE/3GAR/en/content.md), 1924 (Die drei Garridebs)
+7. [The Problem of Thor Bridge](/source/CASE/THOR/en/content.md), 1922 (Das Rätsel der Thor-Brücke)
+8. [The Creeping Man](/source/CASE/CREE/en/content.md), 1923 (Der Mann mit dem geduckten Gang)
+9. [The Lion's Mane](/source/CASE/LION/en/content.md), 1926 (Die Löwenmähne)
+10. [The Veiled Lodger](/source/CASE/VEIL/en/content.md), 1927 (Die verschleierte Mieterin)
+11. [Shoscombe Old Place](/source/CASE/SHOS/en/content.md), 1927 (Shoscombe Old Place)
+12. [The Retired Colourman](/source/CASE/RETI/en/content.md), 1926 (Der Farbenhändler im Ruhestand)
 
 
