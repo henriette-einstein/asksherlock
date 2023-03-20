@@ -1,3 +1,4 @@
+import * as dotenv from "dotenv"
 import * as fs from 'fs'
 import matter from 'gray-matter'
 import { getMarkdownFiles } from './utils.mjs'
@@ -8,30 +9,37 @@ import { VectorDBQAChain } from "langchain/chains"
 import { HNSWLib } from "langchain/vectorstores"
 import { RecursiveCharacterTextSplitter } from "langchain/text_splitter"
 
+dotenv.config()
+
 
 export const run = async () => {
     const textSplitter = new RecursiveCharacterTextSplitter({ chunkSize: 1000 })
-    const files = await getMarkdownFiles('public/sources/**/*.md')
+    const files = await getMarkdownFiles('public/sources/**/content.md')
     
     let allDocs = []
-    let allRaw = []
+    let totalBytes = 0
     for (const file of files) {
         const text = fs.readFileSync(file, "utf8")
-        console.log(text.length/1000)
+        totalBytes += text.length
         const { data, content } = matter(text);
         const doc = new Document({ pageContent: content, metadata: data })
         allDocs.push(doc)
-        allRaw.push(text)
     } 
-    console.log("All docs before splitting:")
-    console.log(allDocs.length)
-    allDocs = await textSplitter.splitDocuments(allDocs)
-    console.log("All docs after splitting:")
-    console.log(allDocs.length)
-    allRaw = await textSplitter.createDocuments(allRaw)
-    console.log("All raw after splitting:")
-    console.log(allRaw.length)
-    console.log(allDocs[0])
-    console.log(allRaw[0])
+    let chunkedDocs = await textSplitter.splitDocuments(allDocs)
+    console.log(`Generate ${chunkedDocs.length} chunks`)
+    console.log(`Generate vectors using OpenAI embeddings`)
+
+    const vectorStore = await HNSWLib.fromDocuments(chunkedDocs, new OpenAIEmbeddings());
+    console.log("Saving vectorstore")
+    vectorStore.save("vectorstore")
+    /*
+    const chain = VectorDBQAChain.fromLLM(model, vectorStore);
+
+    const res = await chain.call({
+        input_documents: allDocs,
+        query: "Who is Irene Adler?",
+      });
+      console.log({ res });    
+    **/      
 }
 run()
