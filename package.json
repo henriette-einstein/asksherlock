@@ -21,6 +21,7 @@
     "nuxt-icon": "^0.3.3"
   },
   "dependencies": {
+    "daisyui": "^2.51.4",
     "gray-matter": "^4.0.3",
     "hnswlib-node": "^1.4.2",
     "langchain": "^0.0.36",
