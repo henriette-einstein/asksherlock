@@ -13,3 +13,6 @@ Ich habe mich ein bischen eingelesen und das Ganze erschien mir nach kurzer Zeit
 
 ### Meine Kenntnisse
 ### Eingesetzte Tools
+
+## Sonstiges
+- [Wichtige Links](links.md)

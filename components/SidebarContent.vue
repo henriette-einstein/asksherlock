@@ -8,5 +8,7 @@
         <SidebarItem label="The Adventures of Sherlock Holmes" icon="fluent:book-open-32-regular" url="/"/>  
         <SidebarItem label="The Memoirs of Sherlock Holmes" icon="fluent:book-open-32-regular" url="/"/>  
         <SidebarItem label="The Memoirs of Sherlock Holmes" icon="fluent:book-open-32-regular" url="/"/>  
+        <hr/>
+        <SidebarItem label="About" icon="fluent:question-circle-32-regular" url="/adventures/henni"/>
     </ul>
 </template>
