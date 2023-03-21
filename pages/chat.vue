@@ -2,7 +2,7 @@
   <NuxtLayout>
     <div class="flex flex-col h-full w-full prose max-w-none">
       <h1>Have a Chat with Sherlock Holmes</h1>
-      <div class="bg-gray-300 h-4/5 p-2 ">
+      <div class="bg-gray-300 h-4/5 p-2 overflow-y-auto">
         <div v-for="(entry, index) in chat" :key="index" :class="entry.q?'chat chat-start':'chat chat-end'">
           <div class="chat-bubble">{{entry.message}}</div>
         </div>
@@ -22,11 +22,26 @@ let chat = [
     q: false,
   }
 ];
-function addQuestion() {
+
+async function addQuestion() {
+
+  const {data:answer } = await useFetch('/api/search', {
+    method: 'post',
+    body: {
+      q: question.value
+    }
+  })
+  console.log(answer)
   chat.push({
     message: question.value,
     q: true,
-  });
+  })
+  chat.push({
+    message: answer.value,
+    q: false,
+  })
   question.value = "";
-}
+};
+
+ 
 </script>
