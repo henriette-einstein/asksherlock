@@ -1,10 +1,11 @@
 ---
-Title: A Scandal in Bohemia
-Shortcut: SCAN
-Collection: ADVE
-Author: Arthur Conan Doyle
-Language: English
-Published: 1891
+title: A Scandal in Bohemia
+shortcut: scan
+collection: adve
+author: Arthur Conan Doyle
+published: 1891
+language: en
+url: /src/adve/scan/en/content
 ---
 # A Scandal in Bohemia
 ## I.
