@@ -1,9 +1,11 @@
 ---
-Title: The Adventure of the Sussex Vampire
-Shortcut: SUSS
-Collection: CASE
-Author: Arthur Conan Doyle
-Published: 1924
+title: The Adventure of the Sussex Vampire
+shortcut: suss
+collection: case
+author: Arthur Conan Doyle
+published: 1924
+language: en
+url: /src/case/suss/en/content
 ---
 # The Adventure of the Sussex Vampire
 

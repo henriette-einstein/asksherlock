@@ -1,9 +1,11 @@
 ---
-Title: The Blanched Soldier
-Shortcut: BLAN
-Collection: CASE
-Author: Arthur Conan Doyle
-Published: 1926
+title: The Blanched Soldier
+shortcut: blan
+collection: case
+author: Arthur Conan Doyle
+published: 1926
+language: en
+url: /src/case/blan/en/content
 ---
 # The Blanched Soldier
 

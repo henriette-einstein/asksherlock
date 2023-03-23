@@ -1,9 +1,11 @@
 ---
-Title: The Adventure of the Creeping Man
-Shortcut: CREE
-Collection: CASE
-Author: Arthur Conan Doyle
-Published: 1923
+title: The Adventure of the Creeping Man
+shortcut: cree
+collection: case
+author: Arthur Conan Doyle
+published: 1923
+language: en
+url: /src/case/cree/en/content
 ---
 # The Adventure of the Creeping Man
 

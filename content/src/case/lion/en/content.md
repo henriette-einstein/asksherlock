@@ -1,9 +1,11 @@
 ---
-Title: The Adventure of the Lion's Mane
-Shortcut: LION
-Collection: CASE
-Author: Arthur Conan Doyle
-Published: 1926
+title: The Adventure of the Lion's Mane
+shortcut: lion
+collection: case
+author: Arthur Conan Doyle
+published: 1926
+language: en
+url: /src/case/lion/en/content
 ---
 # The Adventure of the Lion's Mane
 

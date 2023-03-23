@@ -1,9 +1,11 @@
 ---
-Title: The Adventure of the Three Garridebs
-Shortcut: 3GAR
-Collection: CASE
-Author: Arthur Conan Doyle
-Published: 1924
+title: The Adventure of the Three Garridebs
+shortcut: 3gar
+collection: case
+author: Arthur Conan Doyle
+published: 1924
+language: en
+url: /src/case/3gar/en/content
 ---
 # The Adventure of the Three Garridebs
 

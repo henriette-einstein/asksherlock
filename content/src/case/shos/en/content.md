@@ -1,9 +1,11 @@
 ---
-Title: The Adventure of Shoscombe Old Place
-Shortcut:  SHOS
-Collection: CASE
-Author: Arthur Conan Doyle
-Published: 1927
+title: The Adventure of Shoscombe Old Place
+shortcut:  shos
+collection: case
+author: Arthur Conan Doyle
+published: 1927
+language: en
+url: /src/case/show/en/content
 ---
 # The Adventure of Shoscombe Old Place
 

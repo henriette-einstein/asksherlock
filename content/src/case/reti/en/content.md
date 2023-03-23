@@ -1,9 +1,11 @@
 ---
-Title: The Adventure of the Retired Colourman
-Shortcut: RETI
-Collection: CASE
-Author: Arthur Conan Doyle
-Published: 1926
+title: The Adventure of the Retired Colourman
+shortcut: reti
+collection: case
+author: Arthur Conan Doyle
+published: 1926
+language: en
+url: /src/case/reti/en/content
 ---
 # The Adventure of the Retired Colourman
 

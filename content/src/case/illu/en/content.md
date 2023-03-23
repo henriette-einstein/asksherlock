@@ -1,9 +1,11 @@
 ---
-Title: The Illustrious Client
-Shortcut: ILLU
-Collection: CASE
-Author: Arthur Conan Doyle
-Published: 1924
+title: The Illustrious Client
+shortcut: illu
+collection: case
+author: Arthur Conan Doyle
+published: 1924
+language: en
+url: /src/case/illu/en/content
 ---
 # The Illustrious Client
 

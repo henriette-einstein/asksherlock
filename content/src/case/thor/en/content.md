@@ -1,9 +1,11 @@
 ---
-Title: The Problem of Thor Bridge
-Shortcut: THOR
-Collection: CASE
-Author: Arthur Conan Doyle
-Published: 1922
+title: The Problem of Thor Bridge
+shortcut: thor
+collection: case
+author: Arthur Conan Doyle
+published: 1922
+language: en
+url: /src/case/thor/en/content
 ---
 # The Problem of Thor Bridge
 

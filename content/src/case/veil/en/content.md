@@ -1,9 +1,11 @@
 ---
-Title: The Adventure of the Vailed Lodger
-Shortcut: VEIL
-Collection: CASE
-Author: Arthur Conan Doyle
-Published: 1927
+title: The Adventure of the Vailed Lodger
+shortcut: veil
+collection: case
+author: Arthur Conan Doyle
+published: 1927
+language: en
+url: /src/case/veil/en/content
 ---
 # The Adventure of the Veiled Lodger
 

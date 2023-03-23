@@ -1,9 +1,11 @@
 ---
-Title: The Adventure of the Mazarin Stone
-Shortcut: MAZA
-Collection: CASE
-Author: Arthur Conan Doyle
-Published: 1921
+title: The Adventure of the Mazarin Stone
+shortcut: maza
+collection: case
+author: Arthur Conan Doyle
+published: 1921
+language: en
+url: /src/case/maza/en/content
 ---
 # The Adventure Of the Mazarin Stone
 
