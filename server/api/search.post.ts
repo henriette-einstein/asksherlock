@@ -3,7 +3,7 @@ import { OpenAIEmbeddings } from "langchain/embeddings"
 import { OpenAI } from "langchain/llms"
 import { PromptTemplate } from "langchain/prompts";
 
-import { Characters } from "./prompttypes"
+import { Characters } from "./appTypes"
 import prompts from "./prompts.json"
 
 console.log("Loading vectorstore")

@@ -2,6 +2,7 @@
     <ul class="space-y-2">
         <SidebarItem label="Home" icon="fluent:home-32-regular" url="/" />
         <SidebarItem label="Chat" icon="fluent:chat-32-regular" url="/chat" />
+        <SidebarItem label="Upload" icon="fluent:add-circle-32-regular" url="/upload" />
         <h2 class="border-b text-bold">Sources</h2>
         <SidebarItem label="The Complete Sources" icon="fluent:book-open-32-regular" url="/complete"/>  
         <SidebarItem label="The Novels" icon="fluent:book-open-32-regular" url="/src/novels"/>  
