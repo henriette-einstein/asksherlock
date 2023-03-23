@@ -28,7 +28,8 @@ async function addQuestion() {
   const {data:answer } = await useFetch('/api/search', {
     method: 'post',
     body: {
-      q: question.value
+      q: question.value,
+      person: 'sherlock'
     }
   })
   console.log(answer)
