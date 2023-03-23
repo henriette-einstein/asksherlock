@@ -1,10 +1,11 @@
 ---
-Title: The Valley of Fear
-Shortcut: VALL
-Collection: NOVELS
-Author: Sir Arthur Conan Doyle
-Language: English
-Published: 1915
+title: The Valley of Fear
+shortcut: vall
+collection: novels
+author: Sir Arthur Conan Doyle
+published: 1915
+language: en
+url: /src/novels/vall/en/content
 ---
 # THE VALLEY OF FEAR
 

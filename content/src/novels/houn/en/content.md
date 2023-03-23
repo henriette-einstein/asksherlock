@@ -1,10 +1,11 @@
 ---
-Title: The Hound of the Baskervilles
-Shortcut: HOUN
-Collection: NOVELS
-Author: Arthur Conan Doyle
-Language: English
-Published: 1902
+title: The Hound of the Baskervilles
+shortcut: houn
+collection: houn
+author: Arthur Conan Doyle
+published: 1902
+language: en
+url: /src/novels/houn/en/content
 ---
 # THE HOUND OF THE BASKERVILLES
 

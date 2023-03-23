@@ -1,10 +1,11 @@
 ---
-Title: A Study in Scarlet
-Shortcut: STUD
-Collection: NOVELS
-Author: Arthur Conan Doyle
-Language: English
-Published: 1887
+title: A Study in Scarlet
+shortcut: stud
+collection: novels
+author: Arthur Conan Doyle
+published: 1887
+language: en
+url: /src/novels/stud/en/content
 ---
 # A Study In Scarlet
 ## PART I.

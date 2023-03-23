@@ -1,10 +1,11 @@
 ---
-Title: The Sign of the Four
-Shortcut: SIGN
-Collection: NOVELS
-Author: Arthur Conan Doyle
-Language: English
-Published: 1890
+title: The Sign of the Four
+shortcut: sign
+collection: novels
+author: Arthur Conan Doyle
+published: 1890
+language: en
+url: /src/novels/sign/en/content
 ---
 # The Sign of the Four
 
