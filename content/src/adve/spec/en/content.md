@@ -1,9 +1,11 @@
 ---
-Title: The Adventure of the Speckled Band
-Shortcut: SPEC
-Collection: ADVE
-Author: Arthur Conan Doyle
-Published: 1892
+title: The Adventure of the Speckled Band
+shortcut: spec
+collection: adve
+author: Arthur Conan Doyle
+published: 1892
+language: en
+url: /src/adve/spec/en/content
 ---
 # The Adventure of the Speckled Band
 

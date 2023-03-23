@@ -1,9 +1,11 @@
 ---
-Title: The Adventure of the Blue Carbuncle
-Shortcut: BLUE
-Collection: ADVE
-Author: Arthur Conan Doyle
-Published: 1892
+title: The Adventure of the Blue Carbuncle
+shortcut: blue
+collection: adve
+author: Arthur Conan Doyle
+published: 1892
+language: en
+url: /src/adve/blue/en/content
 ---
 # The Adventure of the Blue Carbuncle
 

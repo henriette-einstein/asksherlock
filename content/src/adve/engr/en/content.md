@@ -1,9 +1,11 @@
 ---
-Title: The Adventure of the Engineer's Thumb
-Shortcut: ENGR
-Collection: ADVE
-Author: Arthur Conan Doyle
-Published: 1892
+title: The Adventure of the Engineer's Thumb
+shortcut: engr
+Collection: adve
+author: Arthur Conan Doyle
+published: 1892
+language: en
+url: /src/adve/engr/en/content
 ---
 # The Adventure of the Engineer's Thumb
 

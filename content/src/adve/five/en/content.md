@@ -1,9 +1,11 @@
 ---
-Title: The Five Orange Pips
-Shortcut: FIVE
-Collection: ADVE
-Author: Arthur Conan Doyle
-Published: 1891
+title: The Five Orange Pips
+shortcut: five
+collection: adve
+author: Arthur Conan Doyle
+published: 1891
+language: en
+url: /src/adve/five/en/content
 ---
 # The Five Orange Pips
 

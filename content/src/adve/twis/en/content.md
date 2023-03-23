@@ -1,9 +1,11 @@
 ---
-Title: The Man with the Twisted Lip
-Shortcut: TWIS
-Collection: ADVE
-Author: Arthur Conan Doyle
-Published: 1891
+title: The Man with the Twisted Lip
+shortcut: twis
+collection: adve
+author: Arthur Conan Doyle
+published: 1891
+language: en
+url: /src/adve/twis/en/content
 ---
 # The Man with the Twisted Lip
 

@@ -1,9 +1,11 @@
 ---
-Title: The Adventure of the Copper Beeches
-Shortcut: COPP
-Collection: ADVE
-Author: Arthur Conan Doyle
-Published: 1892
+title: The Adventure of the Copper Beeches
+shortcut: copp
+collection: adve
+author: Arthur Conan Doyle
+published: 1892
+language: en
+url: /src/adve/copp/en/content
 ---
 # The Adventure of the Copper Beeches
 

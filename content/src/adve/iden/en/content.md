@@ -1,9 +1,11 @@
 ---
-Title: A Case of Identity
-Shortcut: COPP
-Collection: ADVE
-Author: Arthur Conan Doyle
-Published: 1891
+title: A Case of Identity
+shortcut: iden
+collection: adve
+author: Arthur Conan Doyle
+published: 1891
+language: en
+url: /src/adve/iden/en/content
 ---
 # A Case of Identity
 

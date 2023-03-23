@@ -1,9 +1,11 @@
 ---
-Title: The Adventure of the Beryl Coronet
-Shortcut: BERY
-Collection: ADVE
-Author: Arthur Conan Doyle
-Published: 1892
+title: The Adventure of the Beryl Coronet
+shortcut: bery
+collection: adve
+author: Arthur Conan Doyle
+published: 1892
+language: en
+url: /src/adve/bery/en/content
 ---
 # The Adventure of the Beryl Coronet
 

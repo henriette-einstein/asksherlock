@@ -1,9 +1,11 @@
 ---
-Title: The Red-Headed League
-Shortcut: REDH
-Collection: ADVE
-Author: Arthur Conan Doyle
-Published: 1891
+title: The Red-Headed League
+shortcut: redh
+collection: adve
+author: Arthur Conan Doyle
+published: 1891
+language: en
+url: /src/adve/redh/en/content
 ---
 # The Red-Headed League
 

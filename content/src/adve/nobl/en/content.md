@@ -1,9 +1,11 @@
 ---
-Title: The Adventure of the Noble Bachelor
-Shortcut: COPP
-Collection: ADVE
-Author: Arthur Conan Doyle
-Published: 1892
+title: The Adventure of the Noble Bachelor
+shortcut: nobl
+collection: adve
+author: Arthur Conan Doyle
+published: 1892
+language: en
+url: /src/adve/nobl/en/content
 ---
 # The Adventure of the Noble Bachelor
 
