@@ -32,16 +32,4 @@ Start the development server on http://localhost:3000
 yarn dev
 ```
 
-## Production
-
-Build the application for production:
-
-```bash
-yarn build
-```
-
-Locally preview production build:
-
-```bash
-yarn preview
-```
+Now You can access toe site using the URL http://localhost:3000/asksherlock

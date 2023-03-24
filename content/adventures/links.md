@@ -1,7 +1,8 @@
 # Wichtige Links
 
 ## Sherlock Holmes
-
+- [Englische Projekt Gutenberg Seite](https://www.gutenberg.org)
+- [Deutsche Projekt Gutenberg Seite](https://www.projekt-gutenberg.org)
 ## Language Models
 - [ChatGPT](https://chat.openai.com)
 - [OpenAI Platform](https://platform.openai.com)
