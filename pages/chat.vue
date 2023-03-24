@@ -1,48 +1,21 @@
 <template>
   <NuxtLayout>
-    <div class="flex flex-col h-full w-full prose max-w-none">
-      <h1>Have a Chat with Sherlock Holmes</h1>
-      <div class="bg-gray-300 h-4/5 p-2 overflow-y-auto">
-        <div v-for="(entry, index) in chat" :key="index" :class="entry.q?'chat chat-start':'chat chat-end'">
-          <div class="chat-bubble">{{entry.message}}</div>
+    <div class="container prose max-w-none">
+      <h1>With whom would you like to talk?</h1>
+      <div v-for="(person, index) in people" :key="index" class="pt-3">
+        <Nuxt-link class="no-underline" :to="'/chat-' + person.id">
+          <CardHorizontal large :url="person.img" :title="person.title">
+              <p>{{person.desc}}</p>
+          </CardHorizontal>
+        </Nuxt-link>
         </div>
-      </div>
-      <div class="flex bg-base-100 h-1/5 justify-center items-center py-3">
-        <textarea class="w-full h-full p-2 border shadow-xl" placeholder="Type your message here" v-model="question" @keydown.enter="addQuestion"></textarea>
-      </div>
     </div>
   </NuxtLayout>
 </template>
 
 <script setup>
-let question = ref("");
-let chat = [
-  {
-    message: "Hi, I'm Sherlock Holmes. How can I help you? Just type your question below.",
-    q: false,
-  }
-];
+import config from "../config/config.json"
 
-async function addQuestion() {
+const people = config.people
 
-  const {data:answer } = await useFetch('/api/search', {
-    method: 'post',
-    body: {
-      q: question.value,
-      person: 'sherlock'
-    }
-  })
-  console.log(answer)
-  chat.push({
-    message: question.value,
-    q: true,
-  })
-  chat.push({
-    message: answer.value,
-    q: false,
-  })
-  question.value = "";
-};
-
- 
 </script>
