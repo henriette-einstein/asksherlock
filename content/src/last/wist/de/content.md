@@ -14,7 +14,7 @@ Unter meinen Notizen finde ich die Aufzeichnung, daß es ein frostiger, windiger
 
 Aber er schüttelte den Kopf dazu.
 
-»In dem Wort liegt noch etwas mehr, als nur das«, sagte er; »da ist noch so eine Andeutung von ›tragisch‹ und ›schrecklich‹. Wenn du deine Gedanken zurücklenkst auf einige deiner Erzählungen, mit denen du ein langmütiges Publikum angeblich unterhalten hast, so wirst du entdecken, daß häufig das Groteske sich zum Kriminellen vertieft hat. Denke nur an die sonderbaren Erlebnisse mit dem Bund der Rothaarigen. Das war grotesk genug im Anfang und endete schließlich mit einem verzweifelten Raubversuch. Oder denke an die mehr als groteske Geschichte von den fünf ApfelsinenkernenIm Band »Die fünf Apfelsinenkerne« (Frankh'sche Verlagsbuchhandlung, Stuttgart)., die uns geradenwegs in eine Mordverschwörung führte. Das Wort beunruhigt mich.«
+»In dem Wort liegt noch etwas mehr, als nur das«, sagte er; »da ist noch so eine Andeutung von ›tragisch‹ und ›schrecklich‹. Wenn du deine Gedanken zurücklenkst auf einige deiner Erzählungen, mit denen du ein langmütiges Publikum angeblich unterhalten hast, so wirst du entdecken, daß häufig das Groteske sich zum Kriminellen vertieft hat. Denke nur an die sonderbaren Erlebnisse mit dem Bund der Rothaarigen. Das war grotesk genug im Anfang und endete schließlich mit einem verzweifelten Raubversuch. Oder denke an die mehr als groteske Geschichte von den fünf Apfelsinenkernen, die uns geradenwegs in eine Mordverschwörung führte. Das Wort beunruhigt mich.«
 
 »Steht es da?« fragte ich, auf das Telegramm deutend.
 

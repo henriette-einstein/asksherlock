@@ -1,6 +1,6 @@
 # The Adventures of Henriette Einstein
 
-Nicht wundern, im Gegensatz zum Rest der Anwendung wird hier Deutsch gesprochen. Eigentlich sollte die ganze Anwendung in Deutsch erstellt werden, aber die OpenAI-Engine funktioniert angeblich besser in Englisch. Dieser Test wird aber nicht über OpenAI genutzt und kann daher in Deutsch geschrieben werden.
+Nicht wundern, im Gegensatz zum Rest der Anwendung wird hier Deutsch gesprochen. Eigentlich sollte die ganze Anwendung in Deutsch erstellt werden, aber die OpenAI-Engine funktioniert angeblich besser in Englisch. Dieser Text wird aber nicht über OpenAI genutzt und kann daher in Deutsch geschrieben werden.
 
 ## Die Idee hinter der Anwendung
 Seit der Veröffentlichung von ChatGPT ist AI in aller Munde. Ich habe damit auch ein wenig herumgespielt und war fasziniert von den Möglichkeiten. Mir fielen sofort jede Menge Ideen ein, was man mit so einem Language Model alles anstellen könnte, wenn man es in eine Anwendung integriert und mit eigenen Inhalten "trainiert".
@@ -9,10 +9,17 @@ Ich habe mich ein bischen eingelesen und das Ganze erschien mir nach kurzer Zeit
 
 **AskSherlock** ist eine Webanwendung mit der man den berühmten Detektiv zu seinen Abenteuern befragen kann.
 
+## Prompt Engineering
+
 ## Voraussetzungen
 
 ### Meine Kenntnisse
+- HTML/CSS
+- Java, Springframework
 ### Eingesetzte Tools
-
+- [Nuxt.js](https://nuxt.com)
+- [Tailwind CSS](https://tailwindcss.com)
+- [OpenAI API](https://platform.openai.com)
+- [LangChain](https://langchain.readthedocs.io/en/latest/index.html)
 ## Sonstiges
 - [Wichtige Links](links.md)
