@@ -7,7 +7,7 @@ Seit der Veröffentlichung von ChatGPT ist AI in aller Munde. Ich habe damit auc
 
 Ich habe mich ein bischen eingelesen und das Ganze erschien mir nach kurzer Zeit ziemlich gut machbar. Weil ich meine Erfahrungen öffentlich teilen wollte, kamen meine eigenen Texte nicht in Frage. Statt dessen wollte ich lizenzfreie Inhalte in der Anwendung nutzen und so kam ich auf Sherlock Holmes. Die gesammelten Sherlock Holmes Werke von Sir Arthur Conan Dolye, 4 Romane und 56 Kurzgeschichten, sind ausreichend groß für eine Demo und werden vom Projekt Gutenberg im Internet in verschiedenen Formaten bereitgestellt. Und so enstand die Idee von **AskSherlock**:
 
-**AskSherlock** ist eine Webanwendung mit der man den berühmten Detektiv zu seinen Abenteuern befragen kann.
+**AskSherlock** ist eine Webanwendung mit der man verschiedene Gesprächspartner zu den Abenteuern des berühmten Detektivs befragen kann.
 
 ## Prompt Engineering
 
@@ -23,3 +23,5 @@ Ich habe mich ein bischen eingelesen und das Ganze erschien mir nach kurzer Zeit
 - [LangChain](https://langchain.readthedocs.io/en/latest/index.html)
 ## Sonstiges
 - [Wichtige Links](links.md)
+
+## Wie geht es weiter

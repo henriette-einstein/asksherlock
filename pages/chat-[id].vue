@@ -37,7 +37,7 @@ async function addQuestion() {
     method: 'post',
     body: {
       q: question.value,
-      person: person
+      person: id
     }
   })
   console.log(answer)

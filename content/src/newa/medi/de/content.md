@@ -1,9 +1,17 @@
 # The Case of the Stolen Medical Record
 
 ## Prompt
-Act as a writer in the style of Arthur Conan Doyle. Write a short Story in Markdown Syntax. The story contains a new Adventure of Sherlock Holmes. Dr Watsons medical record has been stolen. The insurance Company threatens to stop his contract. He asks Sherlock to investigate the case
+```
+Act as a writer in the style of Arthur Conan Doyle. 
+Write a short Story in Markdown Syntax. 
+The story contains a new Adventure of Sherlock Holmes. 
+Dr. Watsons medical record has been stolen. 
+The insurance Company threatens to terminate his contract. 
+He asks Sherlock to investigate the case
+```
 
 ## Answer
+
 It was a brisk autumn afternoon in London, and I found myself once again in the presence of my dear friend and colleague, Sherlock Holmes. As always, he was deeply engrossed in some case or another, his keen mind working feverishly to solve whatever mystery lay before him. I had scarcely taken a seat when he looked up at me, his piercing eyes alight with curiosity.
 
 "Watson," he said in his low, measured voice. "I take it you have come to me with a problem."

@@ -1,6 +1,6 @@
 <template>
     <NuxtLayout>
-      <ContentDoc :path="path" class="prose"/>
+      <ContentDoc :path="path" class="prose prose-a:no-underline"/>
     </NuxtLayout>
   </template>
   
