@@ -14,7 +14,7 @@ dotenv.config()
 
 export const run = async () => {
     const textSplitter = new RecursiveCharacterTextSplitter({ chunkSize: 1000 })
-    const files = await getMarkdownFiles('public/sources/**/content.md')
+    const files = await getMarkdownFiles('content/src/**/content.md')
     
     let allDocs = []
     let totalBytes = 0
@@ -26,20 +26,11 @@ export const run = async () => {
         allDocs.push(doc)
     } 
     let chunkedDocs = await textSplitter.splitDocuments(allDocs)
-    console.log(`Generate ${chunkedDocs.length} chunks`)
+    console.log(`Generate ${chunkedDocs.length} chunks from ${allDocs.length} documents`)
     console.log(`Generate vectors using OpenAI embeddings`)
 
     const vectorStore = await HNSWLib.fromDocuments(chunkedDocs, new OpenAIEmbeddings());
     console.log("Saving vectorstore")
     vectorStore.save("vectorstore")
-    /*
-    const chain = VectorDBQAChain.fromLLM(model, vectorStore);
-
-    const res = await chain.call({
-        input_documents: allDocs,
-        query: "Who is Irene Adler?",
-      });
-      console.log({ res });    
-    **/      
 }
 run()

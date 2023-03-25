@@ -20,11 +20,25 @@ OPENAI_API_KEY=<YOUR_OPENAI_API_KEY>
 Make sure to install the dependencies:
 
 ```bash
-# yarn
 yarn install
 ```
 
-## Development Server
+## Create the Vector Database
+
+The Vector database is required for the integration of 
+custom content into the OpenAI-Processing. 
+
+!!! This step only works if you have a valid OpenAI Key. You
+can get a test key at https://platform.openai.com/overview
+
+With this key set in the .env file, execute the following
+command
+
+```bash
+yarn generate-all-vectors
+```
+
+## Start Development Server
 
 Start the development server on http://localhost:3000
 
@@ -32,4 +46,4 @@ Start the development server on http://localhost:3000
 yarn dev
 ```
 
-Now You can access toe site using the URL http://localhost:3000/asksherlock
+Now You can access the site using the URL http://localhost:3000/asksherlock
