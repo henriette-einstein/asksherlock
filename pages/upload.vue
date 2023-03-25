@@ -3,7 +3,7 @@
     <div class="container prose">
       <div class="row">
         <div class="col-12">
-          <h1 class="text-primary">Upload new files</h1>
+          <h1>Upload new files</h1>
           <form ref="form">
             <p>Upload your files here</p>
             <input type="file" class="file-input file-input-bordered w-full max-w-xs"  @change="fileChanged"/>
