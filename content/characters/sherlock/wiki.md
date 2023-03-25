@@ -1,3 +1,4 @@
+[Home](/) > [Characters](/characters/)
 # Sherlock Holmes
 
 ## Additional Info 

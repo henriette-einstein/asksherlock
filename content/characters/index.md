@@ -1,3 +1,4 @@
+[Home](/)
 # Characters in the Sherlock Holmes Stories
 
 ## Main Characters

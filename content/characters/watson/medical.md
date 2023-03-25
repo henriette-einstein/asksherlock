@@ -1,9 +1,12 @@
+[Home](/) > [Characters](/characters)
 # Virtual Medical Record
 
 ## Warning
 This page has been created by OpenAI with the prompt
 ```
-Act as a medical doctor. Give me a virtual medical record of Dr. John Watson, the partner of Sherlock Holmes. Return your answer formatted in Markdown
+Act as a medical doctor. Give me a virtual medical record 
+of Dr. John Watson, the partner of Sherlock Holmes.
+Return your answer formatted in Markdown
 ```
 ## Patient Information
 

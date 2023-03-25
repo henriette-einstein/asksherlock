@@ -1,3 +1,4 @@
+[Home](/) > [Characters](/characters/)
 # Virtual Medical Record
 
 ## Warning

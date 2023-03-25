@@ -1,16 +1,20 @@
+[Home](/) > [Characters](/characters/)
 # Irene Adler
 
 ## Warning
 This page has been created by OpenAI with the prompt
 ```
 Write a Wikipedia article about Irene Adler, the lady from the Sherlock Holmes Story. 
-Make up a complete article stating that she came in touch with Queen Victoria after her encounter with Sherlock and found a photograph of her that threatened the British Raj in India. Irene was killed by Duleep Singh in the end. Make the whole Story convincing.
+Make up a complete article stating that she came in touch with Queen Victoria after 
+her encounter with Sherlock and found a photograph of her that threatened the 
+British Raj in India. Irene was killed by Duleep Singh in the end. 
+Make the whole Story convincing.
 Return the answer in Markdown
 ```
 
 --- 
 
-Irene Adler is a fictional character in the Sherlock Holmes story "A Scandal in Bohemia". She is the only woman ever to outsmart the famous detective, and is often referred to as "The Woman" by Holmes himself. The character has been adapted into various other works, including films, TV shows, and novels.
+Irene Adler is a fictional character in the Sherlock Holmes story "[A Scandal in Bohemia](/src/adve/scan/en/content)". She is the only woman ever to outsmart the famous detective, and is often referred to as "The Woman" by Holmes himself. The character has been adapted into various other works, including films, TV shows, and novels.
 
 ## Career
 

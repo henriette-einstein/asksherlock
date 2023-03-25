@@ -1,3 +1,4 @@
+[Home](/) > [Characters](/characters/)
 # Dr. Watson
 
 ## Additional Info 
