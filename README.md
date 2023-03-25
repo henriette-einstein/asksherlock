@@ -4,13 +4,13 @@
 Install ```node.js``` on your local machine
 Install ```yarn``` on your local machine
 
-Copy the file .env.template in the root directory of the project to .env
+Copy the file ```.env.template``` in the root directory of the project to ```.env```
 
 ```bash
 cp .env.template .env
 ```
 
-Modify the line. Replace <YOUR_OPENAI_API_KEY> with your own key
+Modify the line. Replace <YOUR_OPENAI_API_KEY> in the file ```.env``` with your own key
 ````
 OPENAI_API_KEY=<YOUR_OPENAI_API_KEY>
 ````

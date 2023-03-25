@@ -64,13 +64,12 @@ async function addQuestion() {
       person: id
     }
   })
-  console.log(answer)
   chat.push({
     message: question.value,
     q: true,
   })
   chat.push({
-    message: prompt.value,
+    message: answer.value.replace(/^[^a-zA-Z]+/, ''), // remove leading non-alphabetic characters
     q: false,
   })
   question.value = "";

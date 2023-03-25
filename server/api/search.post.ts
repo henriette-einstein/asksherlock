@@ -11,22 +11,24 @@ import { Config, Character } from "../../config/types"
 import config from "../../config/config.json"
 const myConfig = config as Config
 
-const prompt = new PromptTemplate({
-  template: config.people.alfred.prompt,
-  inputVariables: ['question']
-})
-
-
 export default defineEventHandler( async (event) => {
   const store = await lib
   const body = await readBody(event)
   console.log(body)
   
-  const char:Character = myConfig.people[body.person]
+  const character:Character = myConfig.people[body.person]
+
+  const prompt = new PromptTemplate({
+    template: character.prompt,
+    inputVariables: ['question']
+  })
 
   const model = new OpenAI({temperature: 0.9})
 
-  const ret =char
-  // const res = await model.call(body.q)
- return ret
+  console.log("Formatting prompt")
+  const ret = await prompt.format({question:body.q})
+  console.log("Formatted prompt = ", ret)
+
+  const res = await model.call(ret)
+  return res
 })
