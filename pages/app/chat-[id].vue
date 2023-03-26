@@ -29,7 +29,7 @@
 </template>
 
 <script setup>
-import config from "../config/config.json"
+import config from "../../config/config.json"
 const route = useRoute();
 const id = route.params.id;
 

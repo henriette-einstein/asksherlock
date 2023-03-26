@@ -36,11 +36,16 @@ const store  = useAskSherlockStore()
 const character = new CharacterInfo()
 
 
-function createCharacter() {
-    alert(JSON.stringify(character))
+async function createCharacter() {
     store.setCharacterInfo(character)
-    // setCharacterInfo(character)
-    //navigateTo({path: '/editchar'})
-    navigateTo('/editchar', {replace: true})
+    const {data:answer } = await useFetch('/api/createchar', {
+        method: 'post',
+        body: {
+            char: character,
+        }
+    })
+    store.setAiResult(answer.value)
+    alert(answer.value)
+    navigateTo('/editchar')
 }
 </script>
