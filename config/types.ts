@@ -14,4 +14,5 @@ interface People {
 interface Config {
   people: People;
 }
+
 export { Character, People, Config}

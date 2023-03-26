@@ -11,11 +11,17 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/tailwindcss',
     '@nuxt/content',
-    'nuxt-icon'
+    'nuxt-icon',
+    [
+      '@pinia/nuxt', { autoImports: ['defineStore', 'useStore','storeToRefs']}
+    ]
   ],
   // https://content.nuxtjs.org
   content: {
     documentDriven: true
+  },
+  imports: {
+    dirs: ['stores']
   },
   ssr: false
 })
