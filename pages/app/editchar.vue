@@ -1,5 +1,4 @@
 <template>
-  <NuxtLayout>
     <div class="prose h-full w-full max-w-none">
       <textarea id="text" v-model="result" 
         placeholder="Enter your text here" 
@@ -7,7 +6,6 @@
         Das ist ein Test
       </textarea>
     </div>
-  </NuxtLayout>
 </template>
 
 <script setup>

@@ -18,8 +18,8 @@ export default defineNuxtConfig({
   ],
   // https://content.nuxtjs.org
   content: {
-    documentDriven: true
-    //ignores: [new RegExp('^\/app/.*']
+    // documentDriven: true,
+    ignores: ['^\/app/.*']
   },
   imports: {
     dirs: ['stores']

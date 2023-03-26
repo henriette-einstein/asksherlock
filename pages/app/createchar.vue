@@ -1,5 +1,4 @@
 <template>
-  <NuxtLayout>
     <div class="prose">
         <h1>Create a new Character</h1>
         <form class="h-full">
@@ -26,7 +25,6 @@
             </div>
         </form>
     </div>
-    </NuxtLayout>
 </template>
 
 <script setup>

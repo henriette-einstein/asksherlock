@@ -1,5 +1,4 @@
 <template>
-  <NuxtLayout>
     <div class="flex flex-col h-full w-full prose max-w-none">
       <h1>Have a Chat with {{ person.title }}</h1>
       <div class="bg-base-200 h-4/5 p-2 overflow-y-auto">
@@ -25,7 +24,6 @@
         </form>
       </div>
     </div>
-  </NuxtLayout>
 </template>
 
 <script setup>

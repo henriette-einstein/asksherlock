@@ -1,5 +1,4 @@
 <template>
-  <NuxtLayout>
     <div class="container prose max-w-none">
       <h1>With whom would you like to talk?</h1>
       <div v-for="(person, index) in people" :key="index" class="pt-3">
@@ -10,7 +9,6 @@
         </Nuxt-link>
         </div>
     </div>
-  </NuxtLayout>
 </template>
 
 <script setup>
