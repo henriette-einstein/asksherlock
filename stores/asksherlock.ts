@@ -5,6 +5,7 @@ export const useAskSherlockStore = defineStore('askSherlockStore', () => {
     const aiResult = ref("")
 
     function setCharacterInfo (info: CharacterInfo) {
+        console.log("Setting character info to ", info)
         characterInfo.value = info
     }
 

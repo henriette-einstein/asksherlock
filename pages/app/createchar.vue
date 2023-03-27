@@ -14,14 +14,15 @@
                     class="col-span-3 my-2 border focus:outline-none rows-5 h-40"></textarea>
                 <label for="career">Career:</label>
                 <textarea id="career" v-model="character.career" placeholder="The career of the character" 
-                    class="col-span-3 my-2 border focus:outline-none"></textarea>
+                    class="col-span-3 my-2 border focus:outline-none rows-5 h-40"></textarea>
                 <label for="life">Personal Life:</label>
                 <textarea id="life" v-model="character.life" placeholder="The personal life of the character" 
-                    class="col-span-3 my-2 border focus:outline-none"></textarea>
+                    class="col-span-3 my-2 border focus:outline-none rows-5 h-40"></textarea>
                 <label for="personality">Personality:</label>
                 <textarea id="personality" v-model="character.personality" placeholder="The personality of the character" 
-                class="col-span-3 my-2 border focus:outline-none"></textarea>
-                <button class="btn mt-3" @click.prevent="createCharacter">Create the Character</button>
+                class="col-span-3 my-2 border focus:outline-none rows-5 h-40"></textarea>
+                <button v-if="isCreating" class="btn mt-3" >Waiting for OpenAI result</button>
+                <button v-else class="btn mt-3" @click.prevent="createCharacter">Create the Character</button>
             </div>
         </form>
     </div>
@@ -29,21 +30,26 @@
 
 <script setup>
 const store  = useAskSherlockStore()
+const { characterInfo } = storeToRefs(store)
+const isCreating = ref(false)
 
+console.log(characterInfo.value)
 
-const character = new CharacterInfo()
+const character = ref(new CharacterInfo())
+character.value = {...characterInfo.value}
 
 
 async function createCharacter() {
-    store.setCharacterInfo(character)
+    store.setCharacterInfo(character.value)
+    isCreating.value = true
     const {data:answer } = await useFetch('/api/createchar', {
         method: 'post',
         body: {
             char: character,
         }
     })
+    isCreating.value = false
     store.setAiResult(answer.value)
-    alert(answer.value)
-    navigateTo('/editchar')
+    navigateTo('/app/editchar')
 }
 </script>
