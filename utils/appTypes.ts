@@ -1,5 +1,8 @@
 class CharacterInfo {
     id: string = ""
+    age: string = ""
+    height: string = ""
+    weight: string = ""
     name: string = ""
     intro: string = ""
     career: string = ""
@@ -11,6 +14,9 @@ class CharacterInfo {
 function copyCharInfo(info: CharacterInfo): CharacterInfo {
     const ret = new CharacterInfo()
     ret.id = info.id
+    ret.age = info.age
+    ret.height = info.height
+    ret.weight = info.weight
     ret.name = info.name
     ret.intro = info.intro
     ret.career = info.career

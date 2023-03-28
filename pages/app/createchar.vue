@@ -1,46 +1,47 @@
 <template>
-    <div class="prose">
+    <div class="prose max-w-none h-full">
         <h1>Create a new Character</h1>
-        <form class="h-full">
-            <div class="grid grid-cols-4">
-                <label for="name">ID:</label>
-                <input type="text" id="id" name="id" v-model="character.id" placeholder="A unique id for the character" 
-                    class="col-span-3 my-2 border focus:outline-none"/>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" v-model="character.name" placeholder="The name of the character" 
-                    class="col-span-3 my-2 border focus:outline-none"/>
-                <label for="intro">Intro:</label>
-                <textarea id="intro" v-model="character.intro" placeholder="The introduction of the character" 
-                    class="col-span-3 my-2 border focus:outline-none rows-5 h-40"></textarea>
-                <label for="career">Career:</label>
-                <textarea id="career" v-model="character.career" placeholder="The career of the character" 
-                    class="col-span-3 my-2 border focus:outline-none rows-5 h-40"></textarea>
-                <label for="life">Personal Life:</label>
-                <textarea id="life" v-model="character.life" placeholder="The personal life of the character" 
-                    class="col-span-3 my-2 border focus:outline-none rows-5 h-40"></textarea>
-                <label for="personality">Personality:</label>
-                <textarea id="personality" v-model="character.personality" placeholder="The personality of the character" 
-                class="col-span-3 my-2 border focus:outline-none rows-5 h-40"></textarea>
-                <button v-if="isCreating" class="btn mt-3" >Waiting for OpenAI result</button>
-                <button v-else class="btn mt-3" @click.prevent="createCharacter">Create the Character</button>
-            </div>
-        </form>
+        <div class="tabs mb-2">
+          <a :class="activeTab === 'definition'?'tab tab-bordered tab-active':'tab tab-bordered'" href="#" v-on:click.prevent="showDefinition">Definition</a>
+          <a :class="activeTab === 'bio'?'tab tab-bordered tab-active':'tab tab-bordered'" href="#" @click.prevent="showBio">Biography</a>
+          <a :class="activeTab === 'medical'?'tab tab-bordered tab-active':'tab tab-bordered'" href="#" @click.prevent="showMedical">Medical Record</a>
+        </div>
+        <div v-if="activeTab==='definition'">
+            <CharacterInfoForm :character="character"/>
+            <button v-if="isCreating" class="btn mt-3" >Waiting for OpenAI result</button>
+            <button v-else class="btn mt-3" @click.prevent="createCharacter">Create the Character</button>
+        </div>
+        <div class="flex flex-col h-full w-full" v-if="activeTab==='bio'">
+            <textarea class="h-4/5">{{generatedText}}</textarea>
+            <button class="btn mt-3" @click.prevent="showForm">Save Character</button>
+        </div>
+        <div class="flex flex-col h-full w-full" v-if="activeTab==='medical'">
+            <textarea class="h-4/5">{{generatedText}}</textarea>
+            <button class="btn mt-3" @click.prevent="showForm">Save Character</button>
+        </div>
     </div>
 </template>
 
 <script setup>
-const store  = useAskSherlockStore()
-const { characterInfo } = storeToRefs(store)
 const isCreating = ref(false)
+const activeTab = ref('definition')
 
-console.log(characterInfo.value)
+const character = new CharacterInfo()
+const generatedText = ref('')
 
-const character = ref(new CharacterInfo())
-character.value = {...characterInfo.value}
+function showBio() {
+    activeTab.value = 'bio'
+}
 
+function showDefinition() {
+    activeTab.value = 'definition'
+}
+
+function showMedical() {
+    activeTab.value = 'medical'
+}
 
 async function createCharacter() {
-    store.setCharacterInfo(character.value)
     isCreating.value = true
     const {data:answer } = await useFetch('/api/createchar', {
         method: 'post',
@@ -49,7 +50,13 @@ async function createCharacter() {
         }
     })
     isCreating.value = false
-    store.setAiResult(answer.value)
-    navigateTo('/app/editchar')
+    generatedText.value = answer.value
+    showResult()
 }
 </script>
+
+<style scoped>
+textarea{
+    @apply border focus:outline-none;
+}
+</style>

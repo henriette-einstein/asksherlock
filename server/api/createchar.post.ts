@@ -57,13 +57,8 @@ export default defineEventHandler( async (event) => {
     const chat = new ChatOpenAI({ temperature: 0.9 })
 
     const chain = new LLMChain({llm: chat, prompt: chatPromptTemplate})
-    //const res1 = await chain.call({name:body.char.name, intro:body.char.intro, career:body.char.career, life:body.char.life})
-    if (body.char.created) {
-      console.log("Character already created")
-    } else {
-      console.log("Character not created")
-    }
-    const res1 = {text: "Hello"}
+    const res1 = await chain.call({name:body.char.name, intro:body.char.intro, career:body.char.career, life:body.char.life})
+    // const res1 = {text: "Hello"}
     console.log("Got response = ", res1)
 
     return res1.text
