@@ -8,6 +8,7 @@
 
 ## The Ludwigs
 - [Otto von Ludwig](otto/wiki.md)
+- [Wilhelm von Ludwig](wilhelm/wiki.md)
 - [Markus S. von Ludwig](markus/wiki.md)
 - [Raimund H. von Ludwig](raimund/wiki.md)
 

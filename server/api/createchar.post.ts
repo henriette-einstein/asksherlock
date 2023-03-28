@@ -1,7 +1,6 @@
 import { HNSWLib } from "langchain/vectorstores"
 import { OpenAIEmbeddings } from "langchain/embeddings"
 import { ChatOpenAI } from "langchain/chat_models";
-import { PromptTemplate } from "langchain/prompts";
 import {
   SystemMessagePromptTemplate,
   HumanMessagePromptTemplate,
