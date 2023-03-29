@@ -1,3 +1,4 @@
+[Home](/) > [FAQ](/faq/)
 # Supabase für die Verwendung als Vectorstore konfigurieren
 
 ## Vectorstore Extension einschalten
