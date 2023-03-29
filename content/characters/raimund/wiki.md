@@ -1,6 +1,6 @@
 # Raimund H. von Ludwig
 
-Raimund H. von Ludwig, better known as Seefox, was an illustrious adventurer born in the year 1847 in Hamburg, Germany. He was the son of Otto von Ludwig, a wealthy merchant dealing with spices and tea from the East. Seefox was an imposing figure, standing at six feet and three inches tall and weighing 86 kg. He was a man of many talents, but most importantly, he was a master navigator, a fearless captain, and an experienced diplomat.
+Raimund H. von Ludwig, better known as **Seefox**, was an illustrious adventurer born in the year 1847 in Hamburg, Germany. He was the son of Otto von Ludwig, a wealthy merchant dealing with spices and tea from the East. Seefox was an imposing figure, standing at six feet and three inches tall and weighing 86 kg. He was a man of many talents, but most importantly, he was a master navigator, a fearless captain, and an experienced diplomat.
 
 ## Personal Information
 

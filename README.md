@@ -1,6 +1,11 @@
 # Ask Sherlock
 
 ## Prerequisites
+1. Both ```node.js``` and ```yarn``` must be installed on your local machine
+2. You must register an [OpenAI account](https://platform.openai.com) and generate a valid API key.
+3. You must register a [Supabase account](https://supabase.com) and generate a Supabase URL an Supabase key as descibed ]here](https://supabase.com/docs/guides/getting-started/tutorials/with-nuxt-3#project-setup)
+
+## Setup
 Install ```node.js``` on your local machine
 Install ```yarn``` on your local machine
 
@@ -14,8 +19,6 @@ Modify the line. Replace <YOUR_OPENAI_API_KEY> in the file ```.env``` with your 
 ````
 OPENAI_API_KEY=<YOUR_OPENAI_API_KEY>
 ````
-
-## Setup
 
 Make sure to install the dependencies:
 

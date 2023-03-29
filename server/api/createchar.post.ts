@@ -20,9 +20,16 @@ You will then write a Wikipedia article about the character. Let's begin.`)
 
 const humanMessageTemplate1 = HumanMessagePromptTemplate.fromTemplate(`
 Write a profile of the virtual person {name} as if he were a real person.
-{intro}
+
+The following information is known about the character:
+Age: {age}
+Height: {height}
+Weight: {weight}
+Use this information in the virtual person's profile.
 Make up a 3 sentence introduction about him. 
 Add a section "Personal Information"
+Use the following information:
+{intro}
 Add a section "Early life and Education"
 Do not write any other setion
 `)
@@ -56,7 +63,14 @@ export default defineEventHandler( async (event) => {
     const chat = new ChatOpenAI({ temperature: 0.9 })
 
     const chain = new LLMChain({llm: chat, prompt: chatPromptTemplate})
-    const res1 = await chain.call({name:body.char.name, intro:body.char.intro, career:body.char.career, life:body.char.life})
+    const res1 = await chain.call({
+      name:body.char.name, 
+      intro:body.char.intro, 
+      career:body.char.career, 
+      life:body.char.life,
+      age:body.char.age, 
+      height:body.char.height, 
+      weight:body.char.weight})
     // const res1 = {text: "Hello"}
     console.log("Got response = ", res1)
 
