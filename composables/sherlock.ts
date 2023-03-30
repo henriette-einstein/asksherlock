@@ -27,11 +27,7 @@ export function useSherlock()  {
     return ret
   }
   
-  async function newChatModel(temperature: number) {
-    return new ChatOpenAI({temperature: temperature});
-  }
-
-  async function newConversationChain(temperature: number) {
+  async function newChatChain(temperature: number) {
      const model = new ChatOpenAI({temperature: temperature});
      const store = await getStore();
      const retriever = store.asRetriever();
@@ -39,5 +35,5 @@ export function useSherlock()  {
     const chain = ChatVectorDBQAChain.fromLLM(model, store);
   }
 
-  return { similaritySearch }
+  return { similaritySearch, newChatChain }
 }
