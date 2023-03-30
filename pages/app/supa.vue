@@ -2,7 +2,7 @@
   <div>
     <h1>Supabase</h1>
     <form>
-      <input type="text" v-model="question" />
+      <input type="text" class="form-input" v-model="question" />
       <button type="button" @click="askQuestion">Send</button>
     </form>
     {{ ret }}
