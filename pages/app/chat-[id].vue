@@ -27,9 +27,16 @@
 </template>
 
 <script setup>
+import { OpenAIEmbeddings } from "langchain/embeddings"
+import { SupabaseVectorStore } from "langchain/vectorstores";
+
 import config from "../../config/config.json"
+
 const route = useRoute();
 const id = route.params.id;
+
+const client = useSupabaseClient();
+const vectorStore = SupabaseVectorStore.fromExistingIndex(new OpenAIEmbeddings(), client);
 
 const myConfig = config
 const person = myConfig.people[id]

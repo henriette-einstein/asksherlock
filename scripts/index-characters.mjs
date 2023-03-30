@@ -31,6 +31,7 @@ export const run = async () => {
     console.log(`Generate vectors using OpenAI embeddings`)
     const client = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_KEY)
 
+    /**
     const vectorStore = await SupabaseVectorStore.fromDocuments(
       chunkedDocs,
       new OpenAIEmbeddings(),
@@ -40,8 +41,16 @@ export const run = async () => {
         queryName: "match_documents",
       }
     );
-  
-    const resultOne = await vectorStore.similaritySearch("Supabase", 1)
-  
+    */
+   const vectorStore = await SupabaseVectorStore.fromExistingIndex(new OpenAIEmbeddings(),
+   {
+    client,
+    tableName: "documents",
+    queryName: "match_documents",
+    })
+
+    //const vectorstore = await SupabaseVectorStore.fromDocuments(
+    const resultOne = await vectorStore.similaritySearch("Irene", 5)
+    console.log(resultOne)
 }
 run()
