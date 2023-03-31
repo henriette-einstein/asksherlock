@@ -61,7 +61,7 @@ Dieses Script umfasst die oben beschriebenen Schritte und kann in der
 SQL-Konsole von Supabase ausgeführt werden.
 
 ```sql
--- Enable extension
+-- Enable the pgvector extension to work with embedding vectors
 create extension vector;
 
 -- Create a table to store your documents
@@ -102,8 +102,6 @@ $$;
 create index on documents
   using ivfflat (embedding vector_cosine_ops)
   with (lists = 100);
-
-
 ```
 
 ### Quellen

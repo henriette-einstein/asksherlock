@@ -15,7 +15,7 @@
           <textarea class="col-span-5 p-2 focus:outline-none" placeholder="Type your message here" v-model="question"></textarea>
           <div class="flex flex-col">
             <button class="btn btn-primary" @click.prevent="getSimilar">Similarity</button>
-            <button class="btn btn-primary" @click.prevent="getSimilar">Ask Sherlock</button>
+            <button class="btn btn-primary" @click.prevent="askQuestion">Ask Sherlock</button>
           </div>
         </div>
         <form v-if="activeTab === 'settings'" class="h-full w-full p-2 bg-base-200">
@@ -61,7 +61,7 @@ async function askQuestion() {
 }
 
 async function getSimilar() {
-  const response = await sherlock.similaritySearch(question.value, 2)
+  const response = await sherlock.similaritySearch(question.value, 4)
   console.log("I got the following response: " + JSON.stringify(response));
   chat.push({message: question.value, q: true});
   for (const entry of response) {
