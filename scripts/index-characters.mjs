@@ -14,24 +14,24 @@ dotenv.config()
 
 
 export const run = async () => {
-    const textSplitter = new RecursiveCharacterTextSplitter({ chunkSize: 1000 })
+    const textSplitter = new RecursiveCharacterTextSplitter({ chunkSize: 1000, overlapSize: 200 })
     const files = await getMarkdownFiles('content/characters/**/*.md')
     
     let allDocs = []
     let totalBytes = 0
     for (const file of files) {
-        const text = fs.readFileSync(file, "utf8")
-        totalBytes += text.length
-        const { data, content } = matter(text);
-        const doc = new Document({ pageContent: content, metadata: data })
-        allDocs.push(doc)
+      console.log(`Reading ${file}`)
+      const text = fs.readFileSync(file, "utf8")
+      totalBytes += text.length
+      const { data, content } = matter(text);
+      const doc = new Document({ pageContent: content, metadata: data })
+      allDocs.push(doc)
     } 
     let chunkedDocs = await textSplitter.splitDocuments(allDocs)
     console.log(`Generate ${chunkedDocs.length} chunks from ${allDocs.length} documents`)
     console.log(`Generate vectors using OpenAI embeddings`)
     const client = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_KEY)
 
-    /**
     const vectorStore = await SupabaseVectorStore.fromDocuments(
       chunkedDocs,
       new OpenAIEmbeddings(),
@@ -41,7 +41,7 @@ export const run = async () => {
         queryName: "match_documents",
       }
     );
-    */
+   /*
    const vectorStore = await SupabaseVectorStore.fromExistingIndex(new OpenAIEmbeddings(),
    {
     client,
@@ -52,5 +52,6 @@ export const run = async () => {
     //const vectorstore = await SupabaseVectorStore.fromDocuments(
     const resultOne = await vectorStore.similaritySearch("Irene", 5)
     console.log(resultOne)
+    */
 }
 run()
