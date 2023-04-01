@@ -53,6 +53,12 @@ export function useSherlock()  {
     prompt: CONDENSE_PROMPT,
   });
  */
+
+  async function newChat(temperature: number) {
+    const chat = new ChatOpenAI({temperature: temperature, openAIApiKey: env.OPENAI_API_KEY});
+    return chat
+  }
+
   async function newChatChain(temperature: number) {
      const model = new ChatOpenAI({temperature: temperature, openAIApiKey: env.OPENAI_API_KEY});
      const store = await getStore();
@@ -62,5 +68,5 @@ export function useSherlock()  {
     return chain
   }
 
-  return { similaritySearch, newChatChain }
+  return { similaritySearch, newChatChain, newChat }
 }

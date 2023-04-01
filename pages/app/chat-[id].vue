@@ -6,7 +6,7 @@
           <div :class="entry.q?'chat-bubble text-primary bg-primary-content':'chat-bubble text-secondary bg-secondary-content'">{{entry.message}}</div>
         </div>
       </div>
-      <div class="flex flex-col bg-base-100 h-1/4 justify-center items-center py-3 border shadow-xl">
+      <div class="flex flex-1 flex-col bg-base-100 h-1/4 justify-center items-center py-3 border shadow-xl">
         <div class="tabs mb-2">
           <a :class="activeTab === 'chat'?'tab tab-bordered tab-active':'tab tab-bordered'" href="#" v-on:click.prevent="activeTab = 'chat'">Chat</a>
           <a :class="activeTab === 'settings'?'tab tab-bordered tab-active':'tab tab-bordered'" href="#" @click.prevent="activeTab = 'settings'">Settings</a>
@@ -27,16 +27,17 @@
 </template>
 
 <script setup>
-import { OpenAIEmbeddings } from "langchain/embeddings"
-import { SupabaseVectorStore } from "langchain/vectorstores";
-
+import {
+  SystemMessagePromptTemplate,
+  HumanMessagePromptTemplate,
+  ChatPromptTemplate,
+} from "langchain/prompts";
+import { ConversationChain } from "langchain/chains";
+import { BufferMemory } from "langchain/memory";
 import config from "../../config/config.json"
-
+const sherlock = useSherlock()
 const route = useRoute();
 const id = route.params.id;
-
-const client = useSupabaseClient();
-const vectorStore = SupabaseVectorStore.fromExistingIndex(new OpenAIEmbeddings(), client);
 
 const myConfig = config
 const person = myConfig.people[id]
@@ -46,6 +47,19 @@ const activeTab = ref("chat");
 const question = ref("");
 const temperature = ref(0.7);
 const prompt = ref(0)
+
+
+const chatModel = await sherlock.newChat(temperature.value)
+
+const systemMessage = SystemMessagePromptTemplate.fromTemplate("You are a history professor with a lot of knowledge about Sherlock Holmes. Answer all questions and give a good explanation.")
+const humanMessage = HumanMessagePromptTemplate.fromTemplate("{question}")
+const promptTemplate = ChatPromptTemplate.fromPromptMessages([systemMessage,humanMessage])
+
+const chain = new ConversationChain({
+  memory: new BufferMemory({ returnMessages: true, memoryKey: "history" }),
+  llm: chatModel,
+  prompt: promptTemplate
+});
 
 const prompts = [
   {id:0, label:"Kein Template"}, 
@@ -62,6 +76,7 @@ let chat = [
 
 async function addQuestion() {
 
+  /**
   const {data:answer } = await useFetch('/api/search', {
     method: 'post',
     body: {
@@ -69,12 +84,21 @@ async function addQuestion() {
       person: id
     }
   })
-  chat.push({
+  */
+ //const myPrompt = await promptTemplate.formatPromptValue( {question: question.value} )
+ //alert(myPrompt)
+ //console.log("My prompt is " + myPrompt)
+ const answer = await chain.call({question: question.value})
+
+ alert(JSON.stringify(answer))
+ // console.log(answer)
+ //const answer = ref("This is a test answer")
+chat.push({
     message: question.value,
     q: true,
   })
   chat.push({
-    message: answer.value.replace(/^[^a-zA-Z]+/, ''), // remove leading non-alphabetic characters
+    message: answer.response,
     q: false,
   })
   question.value = "";
