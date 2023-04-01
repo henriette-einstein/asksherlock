@@ -17,18 +17,12 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@nuxt/content',
     'nuxt-icon',
-    [
-      '@pinia/nuxt', { autoImports: ['defineStore', 'useStore','storeToRefs']}
-    ],
     '@nuxtjs/supabase'
   ],
   // https://content.nuxtjs.org
   content: {
     // documentDriven: true,
     ignores: ['^\/app/.*']
-  },
-  imports: {
-    dirs: ['stores']
   },
   ssr: false
 })
