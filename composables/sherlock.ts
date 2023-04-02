@@ -4,6 +4,8 @@ import { OpenAIEmbeddings } from "langchain/embeddings"
 import { PromptTemplate } from 'langchain/prompts';
 import { SupabaseVectorStore } from "langchain/vectorstores";
 
+import * as cfg from '../config/config.json'
+
 const CONDENSE_PROMPT =
   PromptTemplate.fromTemplate(`Given the following conversation and a follow up question, rephrase the follow up question to be a standalone question.
 Chat History:
@@ -26,6 +28,8 @@ Answer in Markdown:`,
 export function useSherlock()  {
   const env = useRuntimeConfig();
   const client = useSupabaseClient();
+
+  const config: any = cfg
   const embeddings = new OpenAIEmbeddings({openAIApiKey: env.OPENAI_API_KEY});
   let vectorStore:SupabaseVectorStore
 
@@ -68,5 +72,5 @@ export function useSherlock()  {
     return chain
   }
 
-  return { similaritySearch, newChatChain, newChat }
+  return { similaritySearch, newChatChain, newChat, config }
 }
