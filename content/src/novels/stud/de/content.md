@@ -4,10 +4,27 @@ shortcut: stud
 collection: novels
 author: Arthur Conan Doyle
 published: 1887
-language: en
+language: de
 url: /src/novels/stud/de/content
 ---
 # Eine Studie in Scharlachrot
+
+## Inhaltsverzeichnis
+- [I. Aus Watsons Erinnerungen](#i-aus-watsons-erinnerungen)
+  - [Erstes Kapitel. Sherlock Holmes](#erstes-kapitel-sherlock-holmes)
+  - [Zweites Kapitel. Die Kunst der Schlußfolgerung](#zweites-kapitel-die-kunst-der-schlußfolgerung)
+  - [Drittes Kapitel. Brixtonstraße Nummer drei](#drittes-kapitel-brixtonstraße-nummer-drei)
+  - [Viertes Kapitel. Was uns John Rance erzählte.](#viertes-kapitel-was-uns-john-rance-erzählte)
+  - [Fünftes Kapitel. Wir bekommen Besuch](#fünftes-kapitel-wir-bekommen-besuch)
+  - [Sechstes Kapitel. Tobias Gregson thut große Thaten.](#sechstes-kapitel-tobias-gregson-thut-große-thaten)
+  - [Siebentes Kapitel. Es kommt Licht in das Dunkel](#siebentes-kapitel-es-kommt-licht-in-das-dunkel)
+- [II. Im Lande der Heiligen](#ii-im-lande-der-heiligen)
+  - [Achtes Kapitel. Auf der großen Alkali-Ebene](#achtes-kapitel-auf-der-großen-alkali-ebene)
+  - [Neuntes Kapitel. Die Blume von Utah.](#neuntes-kapitel-die-blume-von-utah)
+  - [Zehntes Kapitel. John Ferrier spricht mit dem Propheten.](#zehntes-kapitel-john-ferrier-spricht-mit-dem-propheten)
+  - [Elftes Kapitel. Eine Flucht auf Leben und Tod.](#elftes-kapitel-eine-flucht-auf-leben-und-tod)
+  - [Zwölftes Kapitel. Die Würgengel.](#zwölftes-kapitel-die-würgengel)
+- [Fortsetzung von Dr. Watsons Erinnerungen.](#fortsetzung-von-dr-watsons-erinnerungen)
 
 ## I. Aus Watsons Erinnerungen
 
