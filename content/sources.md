@@ -3,6 +3,7 @@
 
 ## Original Sources by Arthur Conan Doyle
 - [The Complete Sherlock Holmes Collection](./src/complete.md)
+- [The Novels](./src/novels/index.md)
 - [The Adventures of Sherlock Holmes](./src/adve/index.md)
 - [The Memoirs of Sherlock Holmes](./src/memo/index.md)
 - [The Return of Sherlock Holmes](./src/retu/index.md)
