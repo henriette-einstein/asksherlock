@@ -22,15 +22,15 @@ Dabei habe ich mehrere [Phasen](./phasen.md) durchlaufen.
 - Phase 2: Erster Kontakt mit Prompt Engineering
 - Phase 3: Integrationsmöglichkeiten von ChatGPT
 - Phase 4: ChatGPT mit eigenen Daten "füttern"
-- Phase 3: ChatGPT um eigene Daten "erweitern"
-- Phase 2: Kann man eigene Daten integrieren?
-- Phase 3: 
+- Phase 5: ChatGPT um eigene Daten "erweitern"
 
 ## Was war zu tun?
 - [Tools installieren und konfigurieren](./howto/supabase.md)
 
 
 - [Texte von Arthur Conan Doyle](sources.md)
+- [Illustrationen](./illustrations.md)
+- [Quellen](./quellen.md)
 
 ## Additional Stuff
 - [Characters of the Sherlock Holmes Stories](./characters/index.md)
