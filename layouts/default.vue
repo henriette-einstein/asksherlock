@@ -1,21 +1,28 @@
-
-import { SlotFlags } from '@vue/shared';
-
 <template>
-  <div class="flex flex-col h-screen">
-    <div class="md:hidden">
-      <Menubar/>
+  <div class="flex flex-row flex-wrap">
+    <div class="md:hidden w-full">
+      <Menubar />
     </div>
-    <!-- Content area -->
-    <div class="flex flex-1">
-      <!-- Sidebar -->
-      <Sidebar />
-      <!-- Main content -->
-      <main class="flex-1 p-6">
-          <slot />
-      </main>
-    </div>
+    <aside class="w-full hidden md:block md:w-1/5 bg-base-200">
+      <div class="sticky top-0 w-full h-screen px-3 py-4">
+        <Nuxt-link class="text-xl font-bold" to="/">Ask Sherlock</Nuxt-link>
+        <img src="/images/Logo.png" class="py-5 w-64" />
+        <!-- navigation -->
+        <ul class="flex flex-col overflow-hidden">
+          <SidebarItem label="Home" icon="fluent:home-32-regular" url="/" />
+          <SidebarItem label="Quellen" icon="fluent:book-open-32-regular" url="/sources" />
+          <SidebarItem label="Personen" icon="fluent:person-32-regular" url="/characters/" />
+          <SidebarItem label="Chat" icon="fluent:chat-32-regular" url="/app/chat" />
+          <SidebarItem label="Upload" icon="fluent:add-circle-32-regular" url="/app/upload" />
+          <SidebarItem label="FAQ" icon="fluent:question-circle-32-regular" url="/faq/" />
+        </ul>
+      </div>
+    </aside>
+    <main role="main" class="w-full h-full md:w-4/5 pt-1 px-2">
+      <slot />
+    </main>
   </div>
+
 </template>
 
 <script setup>

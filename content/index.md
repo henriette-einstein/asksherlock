@@ -25,7 +25,7 @@ Dabei habe ich mehrere [Phasen](./phasen.md) durchlaufen.
 - Phase 5: ChatGPT um eigene Daten "erweitern"
 
 ## Was war zu tun?
-- [Tools installieren und konfigurieren](./howto/supabase.md)
+- [Tools installieren und konfigurieren](./faq/index.md)
 
 
 - [Texte von Arthur Conan Doyle](sources.md)
