@@ -23,7 +23,7 @@
     "@nuxtjs/supabase": "^0.3.1",
     "daisyui": "^2.51.4",
     "gray-matter": "^4.0.3",
-    "langchain": "^0.0.43",
+    "langchain": "^0.0.48",
     "openai": "^3.2.1"
   },
   "resolutions": {
