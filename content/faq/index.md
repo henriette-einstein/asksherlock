@@ -3,7 +3,7 @@
 
 ## Allgemeine Fragen
 
-- [Was ist **AskSherlock** und wofür kann ich es nutzen?]((./asksherlockinfo.md))
+- [Was ist **AskSherlock** und wofür kann ich es nutzen?](./asksherlockinfo.md)
 - [Ist die Nutzung von **AskSherlock** kostenfrei?](asksherlockcosts.md)
 
 ## Funktionalität
