@@ -4,7 +4,7 @@ import { OpenAI } from "langchain/llms"
 import { PromptTemplate } from "langchain/prompts";
 
 console.log("Loading vectorstore")
-const lib = HNSWLib.load("vectorstore", new OpenAIEmbeddings())
+// const lib = HNSWLib.load("vectorstore", new OpenAIEmbeddings())
 console.log("Loaded vectorstore")
 
 import { Config, Character } from "../../utils/appTypes"
@@ -12,7 +12,7 @@ import config from "../../config/config.json"
 const myConfig = config as Config
 
 export default defineEventHandler( async (event) => {
-  const store = await lib
+  // const store = await lib
   const body = await readBody(event)
   console.log(body)
   

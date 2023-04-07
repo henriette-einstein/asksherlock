@@ -18,15 +18,15 @@
 </template>
 
 <script setup>
-const isExpanded = ref(true)
+const isExpanded = ref(false)
 const props = defineProps({
   title: {
     type: String,
     default: 'Titel fehlt'
   },
   headinglevel: {
-    type: Number,
-    default: 0
+    type: String,
+    default: '0'
   }
 })
 </script>

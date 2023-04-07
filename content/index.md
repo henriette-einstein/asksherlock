@@ -18,10 +18,11 @@ Holmes gehört und außerdem können die Originaltexte lizenzfrei genutzt werden
 Seit ca. Anfang Februar 2023 beschäftige ich mich aus Anwendersicht mit dem Thema Large Language Models (LLM's). 
 Dabei habe ich mehrere [Phasen](./phasen.md) durchlaufen.
 
-- Phase 1: Herumspielen mit ChatGPT
-- Phase 2: Erster Kontakt mit Prompt Engineering
-- Phase 3: Integrationsmöglichkeiten von ChatGPT
-- Phase 4: ChatGPT mit eigenen Daten "füttern"
+- Phase 1: [Herumspielen mit ChatGPT](./playaround.md)
+- Phase 2: [Erster Kontakt mit Prompt Engineering](./prompteng.md)
+- Phase 3: [Integrationsmöglichkeiten von ChatGPT](./integrate.md)
+- Phase 4: [ChatGPT mit eigenen Daten "füttern"](./feeddata.md)
+- Phase 5: [Agenten und Tools](./agents.md)
 
 ## Was war zu tun?
 - [Tools installieren und konfigurieren](./faq/index.md)

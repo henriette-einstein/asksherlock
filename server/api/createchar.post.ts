@@ -10,7 +10,7 @@ import { LLMChain } from "langchain/chains";
 
 
 console.log("Loading vectorstore")
-const lib = HNSWLib.load("vectorstore", new OpenAIEmbeddings())
+// const lib = HNSWLib.load("vectorstore", new OpenAIEmbeddings())
 console.log("Loaded vectorstore")
 
 const systemMessageTemplate = SystemMessagePromptTemplate.fromTemplate(`Hello, you are a Wikipedia author that writes Wikipedia articles about interesting characters. 
@@ -56,7 +56,7 @@ const chatPromptTemplate = ChatPromptTemplate.fromPromptMessages(
 )
 
 export default defineEventHandler( async (event) => {
-    const store = await lib
+    // const store = await lib
     const body = await readBody(event)
     console.log(body)
   

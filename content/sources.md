@@ -1,7 +1,7 @@
 [Home](/)
-# The Sources
+# Quellen
 
-## Original Sources by Arthur Conan Doyle
+## Sherlock Holmes Geschichten von Arthur Conan Doyle
 - [The Complete Sherlock Holmes Collection](./src/complete.md)
 - [The Novels](./src/novels/index.md)
 - [The Adventures of Sherlock Holmes](./src/adve/index.md)
@@ -10,7 +10,7 @@
 - [His Last Bow](./src/last/index.md)
 - [The Case-Book of Sherlock Holmes](./src/case/index.md)
 
-## Sources created by OpenAI
+## Von OpenAI erzeugte Geschichten
 - [New Adventures of Sherlock Holmes](./src/newa/index.md)
 
 
