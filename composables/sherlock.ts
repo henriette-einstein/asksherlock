@@ -3,8 +3,17 @@ import { ChatVectorDBQAChain } from "langchain/chains";
 import { OpenAIEmbeddings } from "langchain/embeddings"
 import { PromptTemplate } from 'langchain/prompts';
 import { SupabaseVectorStore } from "langchain/vectorstores";
+import {
+  SystemMessagePromptTemplate,
+  HumanMessagePromptTemplate,
+  ChatPromptTemplate,
+} from "langchain/prompts";
+import { ConversationChain } from "langchain/chains";
+import { BufferMemory } from "langchain/memory";
+
 
 import * as cfg from '../config/config.json'
+import * as promptCfg from '../config/prompts.json'
 
 const CONDENSE_PROMPT =
   PromptTemplate.fromTemplate(`Given the following conversation and a follow up question, rephrase the follow up question to be a standalone question.
@@ -30,6 +39,7 @@ export function useSherlock()  {
   const client = useSupabaseClient();
 
   const config: any = cfg
+  const promptConfig: any = promptCfg
   const embeddings = new OpenAIEmbeddings({openAIApiKey: env.OPENAI_API_KEY});
   let vectorStore:SupabaseVectorStore
 
@@ -72,5 +82,23 @@ export function useSherlock()  {
     return chain
   }
 
-  return { similaritySearch, newChatChain, newChat, config }
+  async function getChatChain(chatpartner: string, temperature: number) {
+    const model = new ChatOpenAI({temperature: temperature, openAIApiKey: env.OPENAI_API_KEY});
+    let prompt = "Beantworte meine Fragen bitte in Deutsch"
+    if (chatpartner && promptConfig.people[chatpartner]) {
+      prompt = promptConfig.people[chatpartner].system
+    } 
+    const systemMessage = SystemMessagePromptTemplate.fromTemplate(prompt)
+    const humanMessage = HumanMessagePromptTemplate.fromTemplate("{question}")
+    const promptTemplate = ChatPromptTemplate.fromPromptMessages([systemMessage, humanMessage])
+    const chain = new ConversationChain({
+      memory: new BufferMemory({ returnMessages: true, memoryKey: "history" }),
+      llm: model,
+      prompt: promptTemplate
+    });
+    return chain
+  }
+
+
+  return { similaritySearch, newChatChain, newChat, getChatChain, config, promptConfig }
 }

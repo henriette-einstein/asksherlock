@@ -1,111 +1,76 @@
 <template>
-  <div class="grid grid-rows-[70vh,25vh]">
-    <div ref="historyContainer" class="overflow-y-auto">
-      <div v-for="(entry, index) in history" :key="index" :class="getMessageClass(entry)">
-          <p>{{ entry.message }}</p>
-        </div>
+  <div class="grid grid-rows-[70vh,25vh] prose max-w-none">
+    <div class="overflow-y-auto " ref="listContainer">
+      <p><NuxtLink to="/" class="no-underline">Home</NuxtLink> &gt; <NuxtLink to="/app/chat" class="no-underline">Chat</NuxtLink></p>
+      <h1 class="mb-5">Sie sprechen mit {{ title }}</h1>
+      <ul class="divide-y divide-gray-200 list-none mx-5">
+        <li v-for="(entry, index) in history" :key="index" class="p-2" :class="getMessageClass(entry)">
+          {{ entry.message }}
+        </li>
+      </ul>
     </div>
-    <div class="border overflow-y-auto">
+    <div class="border mx-5 my-5">
       <div class="tabs h-1/5 m-0 justify-center">
         <a :class="activeTab === 'chat' ? 'tab tab-bordered tab-active' : 'tab tab-bordered'" href="#"
           v-on:click.prevent="activeTab = 'chat'">Chat</a>
         <a :class="activeTab === 'settings' ? 'tab tab-bordered tab-active' : 'tab tab-bordered'" href="#"
-          @click.prevent="activeTab = 'settings'">Settings</a>
+          @click.prevent="activeTab = 'settings'">Einstellungen</a>
       </div>
-      <textarea v-if="activeTab === 'chat'" class="h-4/5 w-full p-2 focus:outline-none"
-        placeholder="Type your message here" v-model="question" @keydown.enter="addQuestion"></textarea>
-      <form v-if="activeTab === 'settings'" class="h-4/5 w-full p-2 bg-base-200">
+      <form @submit.prevent="addQuestion">
+        <textarea v-if="activeTab === 'chat'" class="h-full w-full p-2 focus:outline-none"
+          placeholder="Stellen Sie Ihre Frage hier" v-model="question" @keydown.enter="addQuestion" />
+      </form>
+      <form v-if="activeTab === 'settings'" class="h-4/5 w-full mt-2 p-2 bg-base-200">
         <div class="grid grid-cols-4">
           <label for="temp" class="label">Temperature: </label>
           <input id="temp" type="text" class="input input-bordered w-full col-span-3" v-model="temperature"
             placeholder="Temperature value" />
-          <label for="prompt" class="label">Prompt-Template: </label>
-          <select id="prompt" class="select select-bordered w-full col-span-3" v-model="prompt">
-            <option v-for="(option, index) in prompts" :key="option.id" :value="option.id">{{ option.label }}</option>
-          </select>
         </div>
       </form>
     </div>
   </div>
-
 </template>
 
 <script setup>
-import {
-  SystemMessagePromptTemplate,
-  HumanMessagePromptTemplate,
-  ChatPromptTemplate,
-} from "langchain/prompts";
-import { ConversationChain } from "langchain/chains";
-import { BufferMemory } from "langchain/memory";
+
 const sherlock = useSherlock()
 const route = useRoute();
 const id = route.params.id;
 
-const person = sherlock.config.people[id]
-
-
-/** Input fields */
+const history = ref([])
+const question = ref('')
+const listContainer = ref(null)
 const activeTab = ref("chat");
-const question = ref("");
 const temperature = ref(0.7);
-const prompt = ref(0)
+const title = sherlock.promptConfig.people[id].title
 
-const historyContainer =ref(null)
+const chatChain = await sherlock.getChatChain(id, temperature.value)
 
-const chatModel = await sherlock.newChat(temperature.value)
-
-const systemMessage = SystemMessagePromptTemplate.fromTemplate(person.prompt)
-const humanMessage = HumanMessagePromptTemplate.fromTemplate("{question}")
-const promptTemplate = ChatPromptTemplate.fromPromptMessages([systemMessage, humanMessage])
-
-const chain = new ConversationChain({
-  memory: new BufferMemory({ returnMessages: true, memoryKey: "history" }),
-  llm: chatModel,
-  prompt: promptTemplate
-});
-
-const prompts = [
-  { id: 0, label: "Kein Template" },
-  { id: 1, label: "Template 1" },
-  { id: 2, label: "Template 2" },
-  { id: 3, label: "Template 3" },
-]
-let history = ref([
-  {
-    message: person.intro,
-    q: false,
-  }
-])
 async function addQuestion() {
+  if (question.value.trim() !== '') {
+    const answer = await chatChain.call({ question: question.value })
 
-  const answer = await chain.call({ question: question.value })
-
-  history.value.push({
-    message: question.value,
-    q: true,
-  })
-  history.value.push({
-    message: answer.response,
-    q: false,
-  })
-  scrollToLastMessage()
-  question.value = "";
-};
-
-function scrollToLastMessage() {
-  if (historyContainer.value) {
-    historyContainer.value.scrollTop = historyContainer.value.scrollHeight
+    history.value.push({
+      message: question.value,
+      q: true,
+    })
+    history.value.push({
+      message: answer.response,
+      q: false,
+    })
+    scrollToBottom()
+    question.value = ''
   }
 }
 
-function getMessageClass(entry) {
-  if (entry.q) {
-    return 'text-red-500'
-  } else {
-    return 'text-blue-500'
-  }
+const scrollToBottom = () => {
+  listContainer.value.scrollTop = listContainer.value.scrollHeight
 }
 
+onUpdated(scrollToBottom)
 
+const getMessageClass = (entry) => {
+  return entry.q ? 'text-left' : 'text-right'
+}
 </script>
+
