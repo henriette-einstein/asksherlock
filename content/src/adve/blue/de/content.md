@@ -10,7 +10,6 @@ url: /src/adve/blue/de/content
 # Die Geschichte des blauen Karfunkels
 
 Am zweiten Tage nach Weihnachten sprach ich vormittags bei meinem Freunde Sherlock Holmes vor, um ihm meine Glückwünsche zum Feste darzubringen. Ich traf ihn in einem purpurroten Schlafrock auf dem Sofa liegend, die lange Pfeife neben sich, ganz begraben unter einem Stoß von Morgenzeitungen. Neben dem Sofa stand ein Holzstuhl, an dessen Lehne ein ruppiger, unappetitlicher steifer Filzhut, an mehreren Stellen eingedrückt und längst nicht mehr gebrauchsfähig, aufgehängt war. Ein Vergrößerungsglas und eine Pinzette auf dem Sitz des Stuhles deuteten an, daß der Hut zum Zweck seiner Untersuchung dort hing.
-
 »Du bist beschäftigt«, sagte ich. »Ich störe dich vielleicht?«
 
 »Durchaus nicht. Es ist mir im Gegenteil ganz erwünscht, mit einem guten Bekannten über die Ergebnisse meiner Untersuchung sprechen zu können. Der Gegenstand ist ein ganz alltäglicher« – dabei deutete er mit dem Daumen nach dem alten Hut hin –, »aber die weiteren Umstände, die mit demselben im Zusammenhang stehen, sind nicht ganz uninteressant, ja sogar einigermaßen lehrreich.«
@@ -461,6 +460,3 @@ Das Feuer im Kamin war längst heruntergebrannt, als sich die kleine Gesellschaf
 
 Die Gäste Doktor Watsons reichten einander die Hände. Noch schlief die große Stadt London. Aber schon kamen von da und dort die ersten Morgengeräusche näher: ratternde Wagen, harte Schritte auf dem Pflaster. Noch sind die Geräusche einzeln zu unterscheiden. Bald aber werden sie angeschwollen sein zu einer Brandung, die sich gegen das graue, weite Häusermeer wirft: Eine Sinfonie der Arbeit.
 
-* * *
-
- [<< zurück](chap006.html)
