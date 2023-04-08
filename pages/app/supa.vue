@@ -61,7 +61,7 @@ async function askQuestion() {
 }
 
 async function getSimilar() {
-  const response = await sherlock.similaritySearch(question.value, 4)
+  const response = await sherlock.similaritySearch(question.value, 10)
   console.log("I got the following response: " + JSON.stringify(response));
   chat.push({message: question.value, q: true});
   for (const entry of response) {

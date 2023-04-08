@@ -6,6 +6,8 @@ Als Erstes habe ich ChatGPT als Ersatz für eine Google Anfrage genutzt. Ich fan
 beeindruckend, wie schnell man verwertbare Antworten bekam. Die folgenden Bespiele verdeutlichen
 das.
 
+- [Frage: Wer ist Sherlock Holmes?](./weristsherlock.md)
+- [Frage: Was sind die bekanntesten Geschichten von Sherlock Holmes?](./bekanntestories.md)
 ::sherlockSection{title="Frage: Wer ist Sherlock Holmes?" headinglevel=3} 
 #### Antwort von ChatGPT
 ![](/gpt/weristsherlock.png)
@@ -28,3 +30,10 @@ nach rechts kopieren um sie zu übersetzen. Man kann es direkt in der ChatGPT-Ob
 #### Antwort von ChatGPT
 ![](/gpt/bekanntestories_englisch.png)
 ::
+
+## ChatGPT als Peer-Programmer
+ChatGPT kann Fragen zur Programmierung beantworten und basierend auf Anweisung auch Programmcode erzeugen. 
+Hier ein paar einfache Beispiele
+
+- [Erkläre mir async/await in Typescript](./asyncawait.md)
+- [Erzeuge eine Vue-Komponente](./createcomponent.md)
