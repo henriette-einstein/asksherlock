@@ -9,7 +9,7 @@ dotenv.config()
 
 const yarg = yargs(hideBin(process.argv))
 
-const argv = yarg.options({
+const argv =  yargs(hideBin(process.argv)).options({
   s: { choices: ['supabase', 'hnswlib', 'chroma'], demandOption: true },
 }).argv;
 
@@ -25,9 +25,9 @@ async function promptUser(store) {
     if (answer.toLowerCase() === 'quit') {
       rl.close(); // close the readline interface and exit the program
     } else {
-      const result = await store.similaritySearch(answer, 10);
+      const result = await store.asRetriever().getRelevantDocuments(answer);
       console.log(result);
-          promptUser(store); // prompt the user again
+      promptUser(store); // prompt the user again
     }
   });
 }
