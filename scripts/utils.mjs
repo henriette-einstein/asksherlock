@@ -1,8 +1,7 @@
 import { TextLoader, DirectoryLoader } from 'langchain/document_loaders'
 import { RecursiveCharacterTextSplitter } from "langchain/text_splitter"
 import { createClient } from "@supabase/supabase-js"
-import { SupabaseVectorStore } from "langchain/vectorstores";
-import { HNSWLib } from "langchain/vectorstores";
+import { HNSWLib, SupabaseVectorStore, Chroma } from "langchain/vectorstores";
 
 async function getImportChunks() {
     const textSplitter = new RecursiveCharacterTextSplitter({ chunkSize: 500, overlapSize: 200 })
@@ -28,8 +27,11 @@ async function openSupabaseVectorStore(embeddings) {
     const client = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_KEY)
     const vectorStore = await SupabaseVectorStore.fromExistingIndex(embeddings, {
       client,
+      similarityK: 2,
+      keywordK: 2,
       tableName: "documents",
-      queryName: "match_documents",
+      similarityQueryName: "match_documents",
+      keywordQueryName: "kw_match_documents",
     });
     return vectorStore
   }
@@ -39,15 +41,80 @@ async function openSupabaseVectorStore(embeddings) {
     return vectorStore
   }
   
+  async function openChromaVectorStore(embeddings) {
+    const vectorStore = await Chroma.fromExistingCollection(
+      embeddings,
+      {
+        collectionName: "sherlock",
+      }
+    );
+    return vectorStore
+  }
+
+  /**
+   * openStore(store, embeddings)
+   * @param {store} The name of the vectorstore to open 
+   * @param {embeddings} The embeddings to use for the vectorstore
+   * @returns a VectorStore
+   */
   async function openStore(store, embeddings) {
     if (store === 'supabase') {
       return await openSupabaseVectorStore(embeddings)
     } else if (store === 'hnswlib') {
       return await openHNSWLibVectorStore(embeddings)
     } else if (store === 'chroma') {
-      return await openHNSWLibVectorStore(embeddings)
+      return await openChromaVectorStore(embeddings)
+    } else {
+      throw new Error(`Unknown store: ${store}`)
     }
   }
+
+  async function storeInSupabase(documents, embeddings) {
+    const client = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_KEY)
+    const vectorStore = await SupabaseVectorStore.fromDocuments(
+      documents,
+      embeddings,
+      {
+        client,
+        similarityK: 2,
+        keywordK: 2,
+        tableName: "documents",
+        similarityQueryName: "match_documents",
+        keywordQueryName: "kw_match_documents",
+      } 
+    );
+    return vectorStore
+  }
+
+  async function storeInHNSWLib(documents, embeddings) {
+    const vectorStore = await HNSWLib.fromDocuments(documents, embeddings);
+    vectorStore.save("vectorstore");
+    return vectorStore
+  }
+
+  async function storeInChroma(documents, embeddings) {
+    const vectorStore = await Chroma.fromDocuments(
+      documents, 
+      embeddings,
+      {
+        collectionName: "sherlock",
+      }
+    );
+    return vectorStore
+  }
+
+  async function storeDocuments(store, documents, embeddings) {
+    if (store === 'supabase') {
+      return await storeInSupabase(documents, embeddings)
+    } else if (store === 'hnswlib') {
+      return await storeInHNSWLib(documents, embeddings)
+    } else if (store === 'chroma') {
+      return await storeInChroma(documents, embeddings)
+    } else {
+      throw new Error(`Unknown store: ${store}`)
+    }
+  }
+
   
 
-export { getImportChunks, openStore }
+export { getImportChunks, openStore, storeDocuments }
