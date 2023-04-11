@@ -9,7 +9,7 @@ dotenv.config()
 const yarg = yargs(hideBin(process.argv))
 
 const argv =  yargs(hideBin(process.argv)).options({
-  s: { choices: ['supabase', 'hnswlib', 'chroma'], demandOption: true },
+  s: { choices: ['supabase', 'hnswlib', 'chroma','pinecone'], demandOption: true },
 }).argv;
 
 async function run() {

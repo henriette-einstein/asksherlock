@@ -1,7 +1,8 @@
 import { TextLoader, DirectoryLoader } from 'langchain/document_loaders'
 import { RecursiveCharacterTextSplitter } from "langchain/text_splitter"
 import { createClient } from "@supabase/supabase-js"
-import { HNSWLib, SupabaseVectorStore, Chroma } from "langchain/vectorstores";
+import { PineconeClient } from "@pinecone-database/pinecone";
+import { HNSWLib, SupabaseVectorStore, Chroma, PineconeStore } from "langchain/vectorstores";
 
 async function getImportChunks() {
     const textSplitter = new RecursiveCharacterTextSplitter({ chunkSize: 500, overlapSize: 200 })
@@ -27,11 +28,8 @@ async function openSupabaseVectorStore(embeddings) {
     const client = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_KEY)
     const vectorStore = await SupabaseVectorStore.fromExistingIndex(embeddings, {
       client,
-      similarityK: 2,
-      keywordK: 2,
       tableName: "documents",
-      similarityQueryName: "match_documents",
-      keywordQueryName: "kw_match_documents",
+      ueryName: "match_documents",
     });
     return vectorStore
   }
@@ -46,11 +44,25 @@ async function openSupabaseVectorStore(embeddings) {
       embeddings,
       {
         collectionName: "sherlock",
+        returnSourceDocuments: true,
       }
     );
     return vectorStore
   }
 
+  async function openPineconeVectorStore(embeddings) {
+    const client = new PineconeClient();
+    await client.init({
+      apiKey: process.env.PINECONE_API_KEY,
+      environment: process.env.PINECONE_ENVIRONMENT,
+    });
+    const pineconeIndex = client.Index(process.env.PINECONE_INDEX);
+    const vectorStore = await PineconeStore.fromExistingIndex(
+      embeddings,
+      { pineconeIndex }
+    );
+    return vectorStore
+  }
   /**
    * openStore(store, embeddings)
    * @param {store} The name of the vectorstore to open 
@@ -64,6 +76,8 @@ async function openSupabaseVectorStore(embeddings) {
       return await openHNSWLibVectorStore(embeddings)
     } else if (store === 'chroma') {
       return await openChromaVectorStore(embeddings)
+    } else if (store === 'pinecone') {
+      return await openPineconeVectorStore(embeddings)
     } else {
       throw new Error(`Unknown store: ${store}`)
     }
@@ -76,11 +90,8 @@ async function openSupabaseVectorStore(embeddings) {
       embeddings,
       {
         client,
-        similarityK: 2,
-        keywordK: 2,
         tableName: "documents",
-        similarityQueryName: "match_documents",
-        keywordQueryName: "kw_match_documents",
+        queryName: "match_documents",
       } 
     );
     return vectorStore
@@ -103,6 +114,20 @@ async function openSupabaseVectorStore(embeddings) {
     return vectorStore
   }
 
+  async function storeInPinecone(documents, embeddings) {
+    const client = new PineconeClient();
+    console.log("Initializing Pinecone client")
+    await client.init({
+      apiKey: process.env.PINECONE_API_KEY,
+      environment: process.env.PINECONE_ENVIRONMENT,
+    });
+    console.log("Getting Pinecone index")
+    const pineconeIndex = client.Index(process.env.PINECONE_INDEX);
+    console.log("Creating Pinecone vector store")
+    const vectorStore = await PineconeStore.fromDocuments(documents, embeddings, { pineconeIndex });
+    return vectorStore
+}
+
   async function storeDocuments(store, documents, embeddings) {
     if (store === 'supabase') {
       return await storeInSupabase(documents, embeddings)
@@ -110,6 +135,8 @@ async function openSupabaseVectorStore(embeddings) {
       return await storeInHNSWLib(documents, embeddings)
     } else if (store === 'chroma') {
       return await storeInChroma(documents, embeddings)
+    } else if (store === 'pinecone') {
+      return await storeInPinecone(documents, embeddings)
     } else {
       throw new Error(`Unknown store: ${store}`)
     }
