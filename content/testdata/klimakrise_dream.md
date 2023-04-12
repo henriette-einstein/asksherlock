@@ -1,5 +1,5 @@
 # Ich habe eine Traum
-von ChatGPT am 8. April 2023
+von Alvis Leon Einstein am 8. April 2023
 
 Meine lieben Mitbürgerinnen und Mitbürger,
 

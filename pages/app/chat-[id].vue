@@ -1,11 +1,14 @@
 <template>
   <div class="grid grid-rows-[70vh,25vh] prose max-w-none">
     <div class="overflow-y-auto " ref="listContainer">
-      <p><NuxtLink to="/" class="no-underline">Home</NuxtLink> &gt; <NuxtLink to="/app/chat" class="no-underline">Chat</NuxtLink></p>
+      <p>
+        <NuxtLink to="/" class="no-underline">Home</NuxtLink> &gt; <NuxtLink to="/app/chat" class="no-underline">Chat
+        </NuxtLink>
+      </p>
       <h1 class="mb-5">Sie sprechen mit {{ title }}</h1>
-      <ul class="divide-y divide-gray-200 list-none mx-5">
+      <ul class="divide-y divide-gray-200 list-none mx-5" >
         <li v-for="(entry, index) in history" :key="index" class="p-2" :class="getMessageClass(entry)">
-          {{ entry.message }}
+          <MarkdownBlock :text="entry.message" />
         </li>
       </ul>
     </div>
@@ -15,6 +18,8 @@
           v-on:click.prevent="activeTab = 'chat'">Chat</a>
         <a :class="activeTab === 'settings' ? 'tab tab-bordered tab-active' : 'tab tab-bordered'" href="#"
           @click.prevent="activeTab = 'settings'">Einstellungen</a>
+        <a :class="activeTab === 'settings' ? 'tab tab-bordered tab-active' : 'tab tab-bordered'" href="#"
+          @click.prevent="scrollToBottom">Scroll</a>
       </div>
       <form @submit.prevent="addQuestion">
         <textarea v-if="activeTab === 'chat'" class="h-full w-full p-2 focus:outline-none"
@@ -48,16 +53,19 @@ const chatChain = await sherlock.getChatChain(id, temperature.value)
 
 async function addQuestion() {
   if (question.value.trim() !== '') {
+    history.value.push(
+      {
+        message: question.value,
+        q: true,
+      })
+  scrollToBottom()
     const answer = await chatChain.call({ question: question.value })
 
-    history.value.push({
-      message: question.value,
-      q: true,
-    })
-    history.value.push({
-      message: answer.response,
-      q: false,
-    })
+    history.value.push(
+      {
+        message: answer.response,
+        q: false,
+      })
     scrollToBottom()
     question.value = ''
   }
@@ -70,7 +78,7 @@ const scrollToBottom = () => {
 onUpdated(scrollToBottom)
 
 const getMessageClass = (entry) => {
-  return entry.q ? 'text-left' : 'text-right'
+  return entry.q ? 'text-left' : 'bg-base-200'
 }
 </script>
 
