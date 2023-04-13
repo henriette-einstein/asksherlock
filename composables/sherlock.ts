@@ -1,7 +1,7 @@
 import { ChatOpenAI } from "langchain/chat_models/openai";
 import { ChatVectorDBQAChain } from "langchain/chains";
 import { OpenAIEmbeddings } from "langchain/embeddings/openai"
-import { PromptTemplate } from 'langchain/prompts';
+import { MessagesPlaceholder, PromptTemplate } from 'langchain/prompts';
 import { SupabaseVectorStore } from "langchain/vectorstores/supabase";
 import {
   SystemMessagePromptTemplate,
@@ -61,13 +61,6 @@ export function useSherlock()  {
     return ret
   }
   
-  /**
-  const questionGenerator = new LLMChain({
-    llm: new OpenAIChat({ temperature: 0 }),
-    prompt: CONDENSE_PROMPT,
-  });
- */
-
   async function newChat(temperature: number) {
     const chat = new ChatOpenAI({temperature: temperature, openAIApiKey: env.OPENAI_API_KEY});
     return chat
@@ -88,9 +81,14 @@ export function useSherlock()  {
     if (chatpartner && promptConfig.people[chatpartner]) {
       prompt = promptConfig.people[chatpartner].system
     } 
-    const systemMessage = SystemMessagePromptTemplate.fromTemplate(prompt)
-    const humanMessage = HumanMessagePromptTemplate.fromTemplate("{question}")
-    const promptTemplate = ChatPromptTemplate.fromPromptMessages([systemMessage, humanMessage])
+    const promptTemplate = ChatPromptTemplate.fromPromptMessages(
+      [
+        SystemMessagePromptTemplate.fromTemplate(prompt), 
+        new MessagesPlaceholder('history'),
+        HumanMessagePromptTemplate.fromTemplate("{question}")
+      ]
+    )
+
     const chain = new ConversationChain({
       memory: new BufferMemory({ returnMessages: true, memoryKey: "history" }),
       llm: model,

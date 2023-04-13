@@ -13,7 +13,7 @@
         </ul>
       </div>
     </aside>
-    <main role="main" class="w-full h-full md:w-4/5 py-5 px-2">
+    <main role="main" class="w-full h-full md:w-4/5">
       <slot />
     </main>
   </div>

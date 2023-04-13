@@ -1,5 +1,5 @@
 <template>
-    <ContentDoc :path="path" class="prose prose-a:no-underline mx-2" />
+    <ContentDoc :path="path" class="prose prose-a:no-underline mx-2 py-5 px-2" />
 </template>
   
 <script setup>
