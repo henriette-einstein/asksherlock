@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <p>
     <div v-html="markdownText"></div>
-  </div>
+  </p>
 </template>
 
 <script setup>
