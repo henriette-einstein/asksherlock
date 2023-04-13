@@ -2,7 +2,10 @@ import { TextLoader, DirectoryLoader } from 'langchain/document_loaders'
 import { RecursiveCharacterTextSplitter } from "langchain/text_splitter"
 import { createClient } from "@supabase/supabase-js"
 import { PineconeClient } from "@pinecone-database/pinecone";
-import { HNSWLib, SupabaseVectorStore, Chroma, PineconeStore } from "langchain/vectorstores";
+import { HNSWLib } from "langchain/vectorstores/hnswlib";
+import { SupabaseVectorStore } from "langchain/vectorstores/supabase";
+import { Chroma } from "langchain/vectorstores/chroma";
+import { PineconeStore } from "langchain/vectorstores/pinecone";
 
 async function getImportChunks() {
     const textSplitter = new RecursiveCharacterTextSplitter({ chunkSize: 500, overlapSize: 200 })

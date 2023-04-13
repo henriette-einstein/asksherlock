@@ -66,6 +66,7 @@ async function addQuestion() {
     await nextTick() // wait for DOM to update
     scrollToBottom()
     const answer = await chatChain.call({ question: question.value })
+    console.log(chatChain.memory)
     const txt = await markdown.markdownToHtml(answer.response)
     history.value.push(
       {

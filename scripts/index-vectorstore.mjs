@@ -1,7 +1,7 @@
 import yargs from 'yargs'
 import { hideBin } from 'yargs/helpers'
 import dotenv from 'dotenv'
-import { OpenAIEmbeddings } from "langchain/embeddings"
+import { OpenAIEmbeddings } from "langchain/embeddings/openai"
 import { storeDocuments, getImportChunks } from './utils.mjs'
 
 dotenv.config()

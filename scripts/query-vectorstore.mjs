@@ -2,8 +2,8 @@ import yargs from 'yargs'
 import { hideBin } from 'yargs/helpers'
 import readline from 'readline';
 import dotenv from 'dotenv'
-import { OpenAIEmbeddings } from "langchain/embeddings"
-import { OpenAI } from "langchain/llms";
+import { OpenAIEmbeddings } from "langchain/embeddings/openai"
+import { OpenAI } from "langchain/llms/openai";
 import { ConversationalRetrievalQAChain } from "langchain/chains";
 import { openStore } from './utils.mjs'
 

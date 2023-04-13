@@ -1,8 +1,8 @@
-import { ChatOpenAI } from "langchain/chat_models";
+import { ChatOpenAI } from "langchain/chat_models/openai";
 import { ChatVectorDBQAChain } from "langchain/chains";
-import { OpenAIEmbeddings } from "langchain/embeddings"
+import { OpenAIEmbeddings } from "langchain/embeddings/openai"
 import { PromptTemplate } from 'langchain/prompts';
-import { SupabaseVectorStore } from "langchain/vectorstores";
+import { SupabaseVectorStore } from "langchain/vectorstores/supabase";
 import {
   SystemMessagePromptTemplate,
   HumanMessagePromptTemplate,
