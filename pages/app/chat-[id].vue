@@ -16,13 +16,13 @@
     </div>
     <div class="h-20vh flex flex-col">
 
+      <div class="shtabs mb-5">
+    <a href="#" class="shtab" :class="activeTab==='chat'?'shactive':''"
+      v-on:click.prevent="activeTab = 'chat'">Chat</a>
+    <a href="#" class="shtab" :class="activeTab==='settings'?'shactive':''"
+      v-on:click.prevent="activeTab = 'settings'">Settings</a>
+  </div>
 
-      <div class="tabs h-1/5 mb-5 justify-center">
-        <a :class="activeTab === 'chat' ? 'tab tab-bordered tab-active' : 'tab tab-bordered'" href="#"
-          v-on:click.prevent="activeTab = 'chat'">Chat</a>
-        <a :class="activeTab === 'settings' ? 'tab tab-bordered tab-active' : 'tab tab-bordered'" href="#"
-          @click.prevent="activeTab = 'settings'">Einstellungen</a>
-      </div>
       <form @submit.prevent="addQuestion" v-if="activeTab === 'chat'" class="flex-1">
         <div class="flex flex-row pb-2 pt-2 h-full">
           <textarea :disabled="isDisabled" v-if="activeTab === 'chat'" class="h-full  w-full p-2 mr-2 focus:outline-none border"
@@ -97,6 +97,16 @@ const getMessageClass = (entry) => {
 </script>
 
 <style>
+.shtabs {
+  @apply flex flex-wrap mb-2 justify-center;
+}
+.shtab {
+  @apply no-underline inline-block pb-2 mr-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300;
+}
+.shactive {
+  @apply text-blue-600 border-blue-600 hover:text-blue-600 hover:border-blue-600;
+}
+
 .h-15vh {
   height: 15%;
   margin: 0;
@@ -112,9 +122,6 @@ const getMessageClass = (entry) => {
   margin: 0;
 }
 
-
-/* prevent default list styles and add custom border */
-*/
 
 /* set padding and margin for list items */
 li:not(:last-child) {
