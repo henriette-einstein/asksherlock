@@ -78,19 +78,22 @@ export function useSherlock()  {
   async function getChatChain(chatpartner: string, temperature: number) {
     const model = new ChatOpenAI({temperature: temperature, openAIApiKey: env.OPENAI_API_KEY});
     let prompt = "Beantworte meine Fragen bitte in Deutsch"
+    let suffix = ""
     if (chatpartner && promptConfig.people[chatpartner]) {
       prompt = promptConfig.people[chatpartner].system
+      suffix = promptConfig.people[chatpartner].suffix
     } 
+    console.log(suffix, prompt)
     const promptTemplate = ChatPromptTemplate.fromPromptMessages(
       [
         SystemMessagePromptTemplate.fromTemplate(prompt), 
-        new MessagesPlaceholder('history'),
+        new MessagesPlaceholder(chatpartner),
         HumanMessagePromptTemplate.fromTemplate("{question}")
       ]
     )
 
     const chain = new ConversationChain({
-      memory: new BufferMemory({ returnMessages: true, memoryKey: "history" }),
+      memory: new BufferMemory({ returnMessages: true, memoryKey: chatpartner }),
       llm: model,
       prompt: promptTemplate
     });

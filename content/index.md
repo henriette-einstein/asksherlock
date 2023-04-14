@@ -1,6 +1,6 @@
 # Ask Sherlock
 
-Willkommen in der Welt von **Sherlock Holmes**!
+Willkommen in der Welt von **Sherlock Einstein**!
 
 ## Worum geht's?
 Ich habe diese Anwendung wurde gebaut, um zu verstehen, wie man Large Language Models (LLM's) 

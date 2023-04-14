@@ -3,7 +3,7 @@
     <div class="md:hidden w-full">
       <Menubar />
     </div>
-    <aside class="w-full hidden md:block md:w-1/5 bg-base-200">
+    <aside class="w-full hidden md:block md:w-1/5 bg-shgray">
       <div class="sticky top-0 w-full h-screen px-3 py-4">
         <Nuxt-link class="text-xl font-bold" to="/">Ask Sherlock</Nuxt-link>
         <img src="/images/Logo.png" class="py-5 w-64" />

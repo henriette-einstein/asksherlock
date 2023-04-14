@@ -1,4 +1,3 @@
-[Home](/) > [Sources](/sources)
 # The Memoirs of Sherlock Holmes
 
 1. [Silver Blaze](/src/memo/silv/en/content), 1892
@@ -10,5 +9,5 @@
 7. [The Crooked Man](/src/memo/croo/en/content), 1893
 8. [The Resident Patient](/src/memo/resi/en/content), 1893
 9. [The Greek Interpreter](/src/memo/gree/en/content), 1893
-10. [The Naval Treaty](/src/memo/nava/en/content), 1893
+10. [The Naval Treaty](/src/memo/nava/en/content), 1893 [Der Marinevertrag](/src/memo/nava/de/content)
 11. [The Final Problem](/src/memo/fina/en/content), 1893

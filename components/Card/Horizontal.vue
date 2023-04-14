@@ -32,7 +32,7 @@ defineProps({
 
 <style>
 .card-style {
-    @apply bg-base-100 border shadow-xl dark:border-gray-700 dark:bg-gray-800;
+    @apply bg-gray-100 border shadow-xl dark:border-gray-700 dark:bg-gray-800;
 }
 .card-image {
     @apply object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg;
