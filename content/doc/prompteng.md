@@ -1,9 +1,7 @@
 # Prompt Engineering
 
 ## Was ist ein Prompt?
-Ein Prompt ist eine Textaufforderung, die ein Benutzer an ein Language Model schickt, um eine
-Antwort zu erhalten. Die Anforderung kann eine Frage oder einen Befehl zum Ausführen einer
-Aktion beinhalten.
+Ein Prompt ist eine Textaufforderung, die ein Benutzer an ein Language Model schickt, um eine Antwort zu erhalten. Die Anforderung kann eine Frage oder einen Befehl zum Ausführen einer Aktion beinhalten.
 
 Ein Language Model ist ein System, dam man einen Text übergibt und der einen Text zurückliefert.
 

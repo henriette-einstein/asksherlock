@@ -3,16 +3,12 @@
 Willkommen in der Welt von **Sherlock Einstein**!
 
 ## Worum geht's?
-Ich habe diese Anwendung wurde gebaut, um zu verstehen, wie man Large Language Models (LLM's) 
-in eigenen Anwendungen nutzen kann. Dabei haben mich vor allem folgende Fragestellungen interessiert:
+**AskSherlock** ist eine Webanwendung, mit der Du auf unterschiedliche Weise
+mit ChatGPT interagieren kannst. 
 
-- Kann man eigene Daten mit LLM's verknüpfen?
-- Kann man LLM's sinnvoll nutzen um Texte zu generieren?
-- Kann man die so generierten Texte bei der Erstellung weiterer Texte nutzen?
-
-Ich habe die Sherlock Holmes Geschichten von Arthur Conan Doyle als Grundlagen für die Beantwortung
-dieser Fragen ausgewählt. Die Besucher dieser Website haben wahrscheinlich schon von Sherlock
-Holmes gehört und außerdem können die Originaltexte lizenzfrei genutzt werden.
+1. Du kannst wie gewohnt mit ChatGPT chatten. Du kannst zusätzlich [Prompt-Templates](doc/prompt.md)
+hinterlegen.
+2. Du kannst ChatGPT mit eigenen Daten "füttern" und dann über diese Daten chatten.
 
 ## We're on the Road to Nowhere 
 Seit ca. Anfang Februar 2023 beschäftige ich mich aus Anwendersicht mit dem Thema Large Language Models (LLM's). 
