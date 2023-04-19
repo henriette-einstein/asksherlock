@@ -23,8 +23,8 @@
     </div>
     <div v-if="fileInput">
       <p v-if="fileInput" class="text-gray-500">{{fileInput.name}} </p>
-      <HButton class="primary mt-3 mr-2" @click.prevent="doUpload">Datei laden</HButton>
     </div>
+    <HButton :disabled="!fileInput" class="primary mt-3 mr-2" @click.prevent="doUpload">Datei laden</HButton>
   </div>
 </template>
 
