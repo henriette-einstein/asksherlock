@@ -27,7 +27,7 @@
         <div class="flex flex-row pb-2 pt-2 h-full">
           <textarea :disabled="isDisabled" v-if="activeTab === 'chat'" class="h-full  w-full p-2 mr-2 focus:outline-none border"
             placeholder="Stellen Sie Ihre Frage hier" v-model="question" />
-          <button :disabled="isDisabled" type="submit" class="py-4 px-8 rounded-lg bg-blue-500 text-white">Los Geht's</button>
+          <HButton :disabled="isDisabled" type="submit" class="primary mx-2 my-2">Los Geht's</HButton>
         </div>
       </form>
       <form v-if="activeTab === 'settings'" class="flex-1 bg-shgray">
