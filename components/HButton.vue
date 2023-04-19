@@ -31,21 +31,18 @@ button.large {
   @apply text-base px-6 py-3
 }
 button.primary {
-  @apply bg-blue-700 text-white hover:bg-blue-800
+  @apply bg-primary text-white hover:bg-primary-focus
 }
 button.secondary {
-  @apply bg-gray-200 text-gray-700 hover:bg-gray-300
-}
-button.tertiary {
-  @apply bg-gray-100 text-gray-700 hover:bg-gray-200
-}
-button.warning {
-  @apply bg-yellow-500 text-white hover:bg-yellow-600
-}
-button.danger {
-  @apply bg-red-500 text-white hover:bg-red-600
+  @apply bg-secondary text-secondary-content hover:bg-secondary-focus
 }
 button.info {
-  @apply bg-blue-500 text-white hover:bg-blue-600
+  @apply bg-info text-info-content hover:bg-info-focus
+}
+button.warning {
+  @apply bg-warning text-warning-content hover:bg-warning-focus
+}
+button.danger {
+  @apply bg-danger text-danger-content hover:bg-danger-focus
 }
 </style>
