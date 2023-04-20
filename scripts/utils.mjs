@@ -1,4 +1,5 @@
-import { TextLoader, DirectoryLoader } from 'langchain/document_loaders'
+import { DirectoryLoader } from 'langchain/document_loaders/fs/directory'
+import { TextLoader } from 'langchain/document_loaders/fs/text'
 import { RecursiveCharacterTextSplitter } from "langchain/text_splitter"
 import { createClient } from "@supabase/supabase-js"
 import { PineconeClient } from "@pinecone-database/pinecone";
