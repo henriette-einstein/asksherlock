@@ -6,4 +6,5 @@
     <SidebarItem label="Personen" icon="fluent:person-32-regular" url="/characters/" />
     <SidebarItem label="Upload" icon="fluent:add-circle-32-regular" url="/app/upload" />
     <SidebarItem label="FAQ" icon="fluent:question-circle-32-regular" url="/faq/" />
+    <SidebarItem label="Einstellungen" icon="fluent:settings-32-regular" url="/app/settings" />
 </template>
