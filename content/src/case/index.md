@@ -1,4 +1,3 @@
-[Home](/) > [Sources](/sources)
 # The Case-Book of Sherlock Holmes
 
 1. [The Illustrious Client](/src/case/illu/en/content), 1924 (Der illustre Klient)

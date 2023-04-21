@@ -8,23 +8,10 @@ Anwendungen unterstützt. Es enthält Komponenten, mit denen man sehr schnell
 - LLM-Agenten
 - und weitere LLM-basierte Anwendungen 
 
-erstellen kann.
+erstellen kann. 
 
-- LLM 
-- PromptTemplate
-- Chains
-- Agents
-- Memory
+Das Framework unterstützt die Programmierspachen JavaScript/TypeScript und Python.
 
-Proleme mit LLMs
-
-- Training Daten sind nicht aktuell
-- Training Daten sind nicht vollständig
-- Antworten sind nicht immer korrekt
-
-Ingestion
-
-Anwendungen
-- QA
-- Chat
-
+## Weitere Infos
+- [LangChain Webseite](https://js.langchain.com/docs/)
+- [LangChain Blog](https://blog.langchain.dev)

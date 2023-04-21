@@ -1,4 +1,3 @@
-[Home](/) > [Sources](/sources)
 # The New Adventures of Sherlock Holmes
 
 This section contains stories in the style of the Sherlock Holmes stories written
