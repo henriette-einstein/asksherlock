@@ -49,6 +49,7 @@ The application uses a local supabase instance per default. If you want to run i
 on a public Supabase instance, perform the following steps
 
 1. Setup your Supabase project
+
 You must register a [Supabase account](https://supabase.com), generate a Supabase project and generate the Supabase URL and the Supabase key for the project as descibed [here](https://supabase.com/docs/guides/getting-started/tutorials/with-nuxt-3#project-setup)
 
 2. Link the local Supabase instance to the public Supabase instance
