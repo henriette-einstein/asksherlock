@@ -50,10 +50,12 @@ async function doUpload() {
   }
   const formData = new FormData();
   formData.append('file', fileInput.value);
+  alert('Datei wird hochgeladen')
   const { data: response } = await useFetch('/api/upload', {
     method: 'post',
     body: formData
   })
+  alert(response.message)
   fileInput.value = null;
 }
 
