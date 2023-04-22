@@ -1,5 +1,3 @@
-import yargs from 'yargs'
-import { hideBin } from 'yargs/helpers'
 import readline from 'readline';
 import dotenv from 'dotenv'
 import { OpenAIEmbeddings } from "langchain/embeddings/openai"
@@ -8,14 +6,6 @@ import { ConversationalRetrievalQAChain } from "langchain/chains";
 import { openStore } from './utils.mjs'
 
 dotenv.config()
-
-const yarg = yargs(hideBin(process.argv))
-
-const argv =  yargs(hideBin(process.argv)).options({
-  s: { choices: ['supabase', 'hnswlib', 'chroma'], demandOption: true },
-}).argv;
-
-
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -41,8 +31,7 @@ async function promptUser(chain, history) {
 
 
 async function run() {
-  console.log("Using store: ", argv.s)
-  const vectorStore = await openStore(argv.s, new OpenAIEmbeddings())
+  const vectorStore = await openStore(new OpenAIEmbeddings())
   const model = new OpenAI(process.env.OPENAI_API_KEY)
   const chain = ConversationalRetrievalQAChain.fromLLM(model, vectorStore.asRetriever())
   promptUser(chain, []); // start the prompting process

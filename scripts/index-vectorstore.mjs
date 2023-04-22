@@ -8,13 +8,17 @@ dotenv.config()
 
 const yarg = yargs(hideBin(process.argv))
 
-const argv =  yargs(hideBin(process.argv)).options({
-  s: { choices: ['supabase', 'hnswlib', 'chroma'], demandOption: true },
-}).argv;
+const argv = yarg
+  .positional('path', {
+    describe: 'The path to the directory containing the documents to index',
+    type: 'string',
+    default: 'data'
+  })
+  .argv;
 
 async function run() {
-  const chunks = await getImportChunks()
-  const vectorStore = await storeDocuments(argv.s, chunks, new OpenAIEmbeddings())
+  const chunks = await getImportChunks("data")
+  const vectorStore = await storeDocuments(chunks, new OpenAIEmbeddings())
 }
 
 run()

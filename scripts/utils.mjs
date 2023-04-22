@@ -1,149 +1,64 @@
 import { DirectoryLoader } from 'langchain/document_loaders/fs/directory'
 import { TextLoader } from 'langchain/document_loaders/fs/text'
+import { PDFLoader} from 'langchain/document_loaders/fs/pdf'
 import { RecursiveCharacterTextSplitter } from "langchain/text_splitter"
 import { createClient } from "@supabase/supabase-js"
-import { PineconeClient } from "@pinecone-database/pinecone";
-import { HNSWLib } from "langchain/vectorstores/hnswlib";
 import { SupabaseVectorStore } from "langchain/vectorstores/supabase";
-import { Chroma } from "langchain/vectorstores/chroma";
-import { PineconeStore } from "langchain/vectorstores/pinecone";
+import path from 'path'
+import dotenv from 'dotenv'
+dotenv.config()
 
-async function getImportChunks() {
+async function getImportChunks(dataPath) {
     const textSplitter = new RecursiveCharacterTextSplitter({ chunkSize: 500, overlapSize: 200 })
-    const loader = new DirectoryLoader("content/testdata/", {
-      ".md": (path) => new TextLoader(path)
+    const loader = new DirectoryLoader(dataPath, {
+      ".txt": (path) => new TextLoader(path),
+      ".md": (path) => new TextLoader(path),
+      ".pdf": (path) => new PDFLoader(path, { splitPages: false }),
     })
     const docs = await loader.load()
     const regex = /^(#+)(\s*)(.*)/gm; // Regular expression to match lines starting with "#"
     const regexNewline = /\n\s*\n/g; // Regular expression to match successive newlines
     const regexNav = /^\[Home.*\n/gm; // Regular expression to match lines starting with "[Home"
     for (const doc of docs) {
+      doc.metadata.fileName = path.basename(doc.metadata.source)
       doc.pageContent = doc.pageContent.replace(regex, ''); // Replace leading #
       doc.pageContent = doc.pageContent.replace(regexNewline, ' '); // Replace multiple newlines blanks
       doc.pageContent = doc.pageContent.replace(regexNav, ''); // Remove navigation links on top of a page
       doc.pageContent = doc.pageContent.replace(/\n/g, ' '); // Replace newlines with blanks
+      doc.pageContent = doc.pageContent.replace(/\s+/g,' ') // remove unnessessary whitespace
+      doc.pageContent = doc.pageContent.replace(/-([\n\r\s]|$)/g,'') // remove hypenations
       doc.pageContent = doc.pageContent.trim(); // Remove leading and trailing whitespace
     }
     const chunks = await textSplitter.splitDocuments(docs)
     return chunks
 }
 
-async function openSupabaseVectorStore(embeddings) {
-    const client = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_KEY)
-    const vectorStore = await SupabaseVectorStore.fromExistingIndex(embeddings, {
-      client,
-      tableName: "documents",
-      ueryName: "match_documents",
-    });
-    return vectorStore
+function getDbConfig() {
+  const client = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_KEY)
+  return {
+    client,
+    tableName: "documents",
+    queryName: "match_documents"
   }
-  
-  async function openHNSWLibVectorStore(embeddings) {
-    const vectorStore = await HNSWLib.load("vectorstore",embeddings);
-    return vectorStore
-  }
-  
-  async function openChromaVectorStore(embeddings) {
-    const vectorStore = await Chroma.fromExistingCollection(
-      embeddings,
-      {
-        collectionName: "sherlock",
-        returnSourceDocuments: true,
-      }
-    );
-    return vectorStore
-  }
+}
 
-  async function openPineconeVectorStore(embeddings) {
-    const client = new PineconeClient();
-    await client.init({
-      apiKey: process.env.PINECONE_API_KEY,
-      environment: process.env.PINECONE_ENVIRONMENT,
-    });
-    const pineconeIndex = client.Index(process.env.PINECONE_INDEX);
-    const vectorStore = await PineconeStore.fromExistingIndex(
-      embeddings,
-      { pineconeIndex }
-    );
-    return vectorStore
-  }
   /**
    * openStore(store, embeddings)
-   * @param {store} The name of the vectorstore to open 
    * @param {embeddings} The embeddings to use for the vectorstore
    * @returns a VectorStore
    */
-  async function openStore(store, embeddings) {
-    if (store === 'supabase') {
-      return await openSupabaseVectorStore(embeddings)
-    } else if (store === 'hnswlib') {
-      return await openHNSWLibVectorStore(embeddings)
-    } else if (store === 'chroma') {
-      return await openChromaVectorStore(embeddings)
-    } else if (store === 'pinecone') {
-      return await openPineconeVectorStore(embeddings)
-    } else {
-      throw new Error(`Unknown store: ${store}`)
-    }
+  async function openStore(embeddings) {
+    const vectorStore = await SupabaseVectorStore.fromExistingIndex(embeddings, getDbConfig());
+    return vectorStore
   }
 
-  async function storeInSupabase(documents, embeddings) {
-    const client = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_KEY)
+  async function storeDocuments(documents, embeddings) {
     const vectorStore = await SupabaseVectorStore.fromDocuments(
       documents,
       embeddings,
-      {
-        client,
-        tableName: "documents",
-        queryName: "match_documents",
-      } 
+      getDbConfig()
     );
     return vectorStore
-  }
-
-  async function storeInHNSWLib(documents, embeddings) {
-    const vectorStore = await HNSWLib.fromDocuments(documents, embeddings);
-    vectorStore.save("vectorstore");
-    return vectorStore
-  }
-
-  async function storeInChroma(documents, embeddings) {
-    const vectorStore = await Chroma.fromDocuments(
-      documents, 
-      embeddings,
-      {
-        collectionName: "sherlock",
-      }
-    );
-    return vectorStore
-  }
-
-  async function storeInPinecone(documents, embeddings) {
-    const client = new PineconeClient();
-    console.log("Initializing Pinecone client")
-    await client.init({
-      apiKey: process.env.PINECONE_API_KEY,
-      environment: process.env.PINECONE_ENVIRONMENT,
-    });
-    console.log("Getting Pinecone index")
-    const pineconeIndex = client.Index(process.env.PINECONE_INDEX);
-    console.log("Creating Pinecone vector store")
-    const vectorStore = await PineconeStore.fromDocuments(documents, embeddings, { pineconeIndex });
-    return vectorStore
-}
-
-  async function storeDocuments(store, documents, embeddings) {
-    if (store === 'supabase') {
-      return await storeInSupabase(documents, embeddings)
-    } else if (store === 'hnswlib') {
-      return await storeInHNSWLib(documents, embeddings)
-    } else if (store === 'chroma') {
-      return await storeInChroma(documents, embeddings)
-    } else if (store === 'pinecone') {
-      return await storeInPinecone(documents, embeddings)
-    } else {
-      throw new Error(`Unknown store: ${store}`)
-    }
   }
 
   

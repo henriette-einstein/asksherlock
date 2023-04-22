@@ -40,7 +40,7 @@ export function useSherlock()  {
 
   const config: any = cfg
   const promptConfig: any = promptCfg
-  const embeddings = new OpenAIEmbeddings({openAIApiKey: env.OPENAI_API_KEY});
+  const embeddings = new OpenAIEmbeddings({openAIApiKey: env.public.OPENAI_API_KEY});
   let vectorStore:SupabaseVectorStore
 
   async function getStore() {
@@ -61,6 +61,15 @@ export function useSherlock()  {
     return ret
   }
   
+  async function upload(filename: string, buffer: Buffer) {
+    console.log("upload", filename, buffer)
+    const { data, error } = await client.storage.from("documents").upload(filename, buffer);
+    if (error) {
+      console.log(error)
+      return error
+    }
+  }
+
   async function newChat(temperature: number) {
     const chat = new ChatOpenAI({temperature: temperature, openAIApiKey: env.OPENAI_API_KEY});
     return chat
@@ -101,5 +110,5 @@ export function useSherlock()  {
   }
 
 
-  return { similaritySearch, newChatChain, newChat, getChatChain, config, promptConfig }
+  return { similaritySearch, newChatChain, newChat, getChatChain, upload, config, promptConfig }
 }

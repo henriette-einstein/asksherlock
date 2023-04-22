@@ -29,13 +29,12 @@
 </template>
 
 <script setup>
-const form = ref(null)
 const fileInput = ref(null);
+const sherlock = useSherlock()
 
 async function fileChanged(e) {
   fileInput.value = e.target.files[0];
   await nextTick()
-  // alert("Changed")
 };
 
 
@@ -44,18 +43,27 @@ function onDrop(e) {
 }
 
 async function doUpload() {
+  console.log("doUpload" + fileInput.value)
+
   if (!fileInput.value) {
     alert('Keine Datei ausgewählt')
     return
   }
   const formData = new FormData();
-  formData.append('file', fileInput.value);
-  alert('Datei wird hochgeladen')
+  alert(JSON.stringify(fileInput.value))
+  // formData.append('file', fileInput.value);
+  const path = fileInput.value.name || "unknown"
+  const buffer = fileInput.value
+  alert("Pfad: "+ path)
+  // alert('Datei wird hochgeladen')
+  await sherlock.upload(path, buffer)
+  /*
   const { data: response } = await useFetch('/api/upload', {
     method: 'post',
     body: formData
   })
-  alert(response.message)
+  */
+  // alert(response.message)
   fileInput.value = null;
 }
 
