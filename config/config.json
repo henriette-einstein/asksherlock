@@ -1,7 +1,10 @@
 {
     "menu": [
         {"label": "Home", "icon":"fluent:home-32-regular", "url":"/" },
-        {"label": "Chat", "icon":"fluent:chat-32-regular", "url":"/app/chat" },
-        {"label": "Info", "icon":"fluent:info-28-regular", "url":"/info/" }
+        {"label": "Frag Sherlock", "icon":"fluent:chat-32-regular", "url":"/chat" },
+        {"label": "Geschichten", "icon": "fluent:book-open-32-regular", "url": "/src/"},
+        {"label": "Info", "icon":"fluent:info-28-regular", "url":"/doc/" }
     ]
 }
+
+

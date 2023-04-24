@@ -19,7 +19,9 @@
     <div v-if="isOpen" class="h-full md:hidden absolute top-16 inset-x-0 p-2 bg-gray-50 dark:bg-gray-800">
       <div class="overflow-y-auto ">
         <ul class="space-y-2">
-          <SidebarContent />
+          <li v-for="item in menuItems" :key="item">
+            <MenuItem :label="item.label" :icon="item.icon" :url="item.url" @click="isOpen=false"/>
+          </li> 
         </ul>
       </div>
     </div>
@@ -28,5 +30,12 @@
   
 <script setup>
 const isOpen = ref(false)
+defineProps({
+  menuItems: {
+    type: Array,
+    required: true,
+    default: []
+  }
+})
 </script>
   

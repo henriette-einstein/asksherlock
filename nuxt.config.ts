@@ -7,9 +7,7 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
-      OPENAI_API_KEY: process.env.OPENAI_API_KEY,
-      SUPABASE_URL: process.env.SUPABASE_URL,
-      SUPABASE_KEY: process.env.SUPABASE_KEY
+      OPENAI_API_KEY: process.env.OPENAI_API_KEY
     }
   },
   modules: [
@@ -26,12 +24,8 @@ export default defineNuxtConfig({
   vite: {
     plugins: [wasm()]
   },
-  nitro: {
-    storage: {
-      data: {
-        driver: 'fs',
-        base: './data'
-      }
-    }
+  supabase: {
+    url: process.env.SUPABASE_URL,
+    key: process.env.SUPABASE_KEY
   }
 })

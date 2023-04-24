@@ -15,25 +15,6 @@ import { BufferMemory } from "langchain/memory";
 import * as cfg from '../config/config.json'
 import * as promptCfg from '../config/prompts.json'
 
-const CONDENSE_PROMPT =
-  PromptTemplate.fromTemplate(`Given the following conversation and a follow up question, rephrase the follow up question to be a standalone question.
-Chat History:
-{chat_history}
-Follow Up Input: {question}
-Standalone question:`);
-
-const QA_PROMPT = PromptTemplate.fromTemplate(
-  `You are an AI assistant providing helpful advice. You are given the following extracted parts of a long document and a question. Provide a conversational answer based on the context provided.
-You should only provide hyperlinks that reference the context below. Do NOT make up hyperlinks.
-If you can't find the answer in the context below, just say "Hmm, I'm not sure." Don't try to make up an answer.
-If the question is not related to the context, politely respond that you are tuned to only answer questions that are related to the context.
-Question: {question}
-=========
-{context}
-=========
-Answer in Markdown:`,
-);
-
 export function useSherlock()  {
   const env = useRuntimeConfig();
   const client = useSupabaseClient();
@@ -71,12 +52,12 @@ export function useSherlock()  {
   }
 
   async function newChat(temperature: number) {
-    const chat = new ChatOpenAI({temperature: temperature, openAIApiKey: env.OPENAI_API_KEY});
+    const chat = new ChatOpenAI({temperature: temperature, openAIApiKey: env.public.OPENAI_API_KEY});
     return chat
   }
 
   async function newChatChain(temperature: number) {
-     const model = new ChatOpenAI({temperature: temperature, openAIApiKey: env.OPENAI_API_KEY});
+     const model = new ChatOpenAI({temperature: temperature, openAIApiKey: env.public.OPENAI_API_KEY});
      const store = await getStore();
      const retriever = store.asRetriever();
 
@@ -85,7 +66,7 @@ export function useSherlock()  {
   }
 
   async function getChatChain(chatpartner: string, temperature: number) {
-    const model = new ChatOpenAI({temperature: temperature, openAIApiKey: env.OPENAI_API_KEY});
+    const model = new ChatOpenAI({temperature: temperature, openAIApiKey: env.public.OPENAI_API_KEY});
     let prompt = "Beantworte meine Fragen bitte in Deutsch"
     let suffix = ""
     if (chatpartner && promptConfig.people[chatpartner]) {
