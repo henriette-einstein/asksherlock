@@ -24,6 +24,10 @@ export function useSherlock()  {
   const embeddings = new OpenAIEmbeddings({openAIApiKey: env.public.OPENAI_API_KEY});
   let vectorStore:SupabaseVectorStore
 
+  function getMenu( ) {
+    return config["menu"]
+  }
+
   async function getStore() {
     if (!vectorStore) {
       vectorStore = await SupabaseVectorStore.fromExistingIndex(embeddings, {
@@ -91,5 +95,5 @@ export function useSherlock()  {
   }
 
 
-  return { similaritySearch, newChatChain, newChat, getChatChain, upload, config, promptConfig }
+  return { similaritySearch, newChatChain, newChat, getChatChain, upload, config, promptConfig, getMenu }
 }

@@ -12,22 +12,22 @@
     "index-testdata": "node scripts/index-testdata.mjs"
   },
   "devDependencies": {
-    "@nuxt/content": "^2.5.2",
+    "@nuxt/content": "^2.6.0",
     "@nuxtjs/tailwindcss": "^6.6.0",
     "@tailwindcss/typography": "^0.5.9",
-    "@types/node": "^18.15.3",
+    "@types/node": "^18.16.0",
     "@types/yargs": "^17.0.24",
     "gh-pages": "^5.0.0",
-    "nuxt": "^3.4.1",
+    "nuxt": "^3.4.2",
     "nuxt-icon": "^0.3.3",
-    "supabase": "^1.50.11",
+    "supabase": "^1.50.12",
     "vite-plugin-wasm": "^3.2.2",
     "yargs": "^17.7.1"
   },
   "dependencies": {
     "@nuxtjs/supabase": "^0.3.5",
     "gray-matter": "^4.0.3",
-    "langchain": "^0.0.59",
+    "langchain": "^0.0.63",
     "openai": "^3.2.1",
     "pdf-parse": "^1.1.1",
     "rehype-stringify": "^9.0.3",

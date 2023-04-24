@@ -20,8 +20,8 @@
       <div class="overflow-y-auto ">
         <ul class="space-y-2">
           <li v-for="item in menuItems" :key="item">
-            <MenuItem :label="item.label" :icon="item.icon" :url="item.url" @click="isOpen=false"/>
-          </li> 
+            <HMenuItem :label="item.label" :icon="item.icon" :url="item.url" @click="isOpen = false" />
+          </li>
         </ul>
       </div>
     </div>
