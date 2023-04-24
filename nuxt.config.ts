@@ -16,10 +16,6 @@ export default defineNuxtConfig({
     'nuxt-icon',
     '@nuxtjs/supabase'
   ],
-  // https://content.nuxtjs.org
-  content: {
-    ignores: ['^\/app/.*']
-  },
   ssr: false,
   vite: {
     plugins: [wasm()]
