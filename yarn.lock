@@ -804,13 +804,6 @@
     ufo "^1.1.1"
     uncrypto "^0.1.2"
 
-"@pinecone-database/pinecone@^0.0.12":
-  version "0.0.12"
-  resolved "https://registry.yarnpkg.com/@pinecone-database/pinecone/-/pinecone-0.0.12.tgz#c40c10464c04c9e2f31fe363c1785177fe3f4868"
-  integrity sha512-YI9IQ7/0k6jI+NUyTD+I2BvwUGhOMRgMpx/qx/v5t5Cm31vSdnXEgGfh9jILUpi/+j59vtK+O5rB+pV5v1L15w==
-  dependencies:
-    cross-fetch "^3.1.5"
-
 "@rollup/plugin-alias@^5.0.0":
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/@rollup/plugin-alias/-/plugin-alias-5.0.0.tgz#70f3d504bd17d8922e35c6b61c08b40a6ec25af2"
@@ -1501,7 +1494,7 @@ binary-search@^1.3.5:
   resolved "https://registry.yarnpkg.com/binary-search/-/binary-search-1.3.6.tgz#e32426016a0c5092f0f3598836a1c7da3560565c"
   integrity sha512-nbE1WxOTTrUWIfsfZ4aHGYu5DOuNkbxGokjV6Z2kxfJK3uaAb8zNK1muzOeipoLHZjInT4Br88BHpzevc681xA==
 
-bindings@^1.4.0, bindings@^1.5.0:
+bindings@^1.4.0:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/bindings/-/bindings-1.5.0.tgz#10353c9e945334bc0511a6d90b38fbc7c9c504df"
   integrity sha512-p2q/t/mhvuOj/UeLlV6566GD/guowlr0hHxClI0W9m7MWYkL1F0hLo+0Aexs9HSPCtR1SXQ0TD3MMKrXZajbiQ==
@@ -1754,13 +1747,6 @@ chownr@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/chownr/-/chownr-2.0.0.tgz#15bfbe53d2eab4cf70f18a8cd68ebe5b3cb1dece"
   integrity sha512-bIomtDF5KGpdogkLd9VspvFzk9KfpyyGlS8YFVZl7TGPBHL5snIOnxeshwVgPteQ9b4Eydl+pVbIyE1DcvCWgQ==
-
-chromadb@^1.3.1:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/chromadb/-/chromadb-1.4.0.tgz#2cd3c9ca3f38327743b0b1046e86680f434f6b73"
-  integrity sha512-FeIidtLSXhjqapdPmY+46QlB0rzf4ZWNwIyp8ZAkGF7su//78yozafA3ayor7bs6CK3T27C0isNVxZaoq0uQOg==
-  dependencies:
-    axios "^0.26.0"
 
 ci-info@^3.8.0:
   version "3.8.0"
@@ -3175,14 +3161,6 @@ hastscript@^7.0.0:
     hast-util-parse-selector "^3.0.0"
     property-information "^6.0.0"
     space-separated-tokens "^2.0.0"
-
-hnswlib-node@^1.4.2:
-  version "1.4.2"
-  resolved "https://registry.yarnpkg.com/hnswlib-node/-/hnswlib-node-1.4.2.tgz#610b39f3975c3104f9ba65f5693a8316b08b587b"
-  integrity sha512-76PIzOaNcX8kOpKwlFPl07uelpctqDMzbiC+Qsk2JWNVkzeU/6iXRk4tfE9z3DoK1RCBrOaFXmQ6RFb1BVF9LA==
-  dependencies:
-    bindings "^1.5.0"
-    node-addon-api "^6.0.0"
 
 hookable@^5.4.2, hookable@^5.5.3:
   version "5.5.3"
@@ -4691,11 +4669,6 @@ nitropack@^2.3.3:
     unenv "^1.3.1"
     unimport "^3.0.6"
     unstorage "^1.4.1"
-
-node-addon-api@^6.0.0:
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/node-addon-api/-/node-addon-api-6.0.0.tgz#cfb3574e6df708ff71a30db6c4762d9e06e11c27"
-  integrity sha512-GyHvgPvUXBvAkXa0YvYnhilSB1A+FRYMpIVggKzPZqdaZfevZOuzfWzyvgzOwRLHBeo/MMswmJFsrNF4Nw1pmA==
 
 node-domexception@^1.0.0:
   version "1.0.0"
