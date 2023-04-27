@@ -1,7 +1,9 @@
 {
     "menu": [
         {"label": "Home", "icon":"fluent:home-32-regular", "url":"/" },
-        {"label": "Frag Sherlock", "icon":"fluent:chat-32-regular", "url":"/chat" },
+        {"label": "Frag OpenAI", "icon":"heroicons:chat-bubble-oval-left", "url":"/app/chat" },
+        {"label": "Frag Sherlock", "icon":"fluent:chat-32-regular", "url":"/app/datachat" },
+        {"label": "Suche","icon":"heroicons:magnifying-glass-20-solid", "url":"/app/search"},
         {"label": "Geschichten", "icon": "fluent:book-open-32-regular", "url": "/src/"},
         {"label": "Info", "icon":"fluent:info-28-regular", "url":"/doc/" }
     ]

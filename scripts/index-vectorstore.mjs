@@ -14,11 +14,21 @@ const argv = yarg
     type: 'string',
     default: 'data'
   })
+  .option('save', {
+    alias: 's',
+    describe: 'Store the chunks in the database',
+    type: 'boolean',
+    default: false
+  })
   .argv;
 
 async function run() {
-  const chunks = await getImportChunks("data")
-  const vectorStore = await storeDocuments(chunks, new OpenAIEmbeddings())
+  const chunks = await getImportChunks(argv.path)
+  console.log(`Generated ${chunks.length} chunks`)
+  if (argv.save) {
+    console.log(`Storing chunks in database`)
+    await storeDocuments(chunks, new OpenAIEmbeddings())
+  }
 }
 
 run()
